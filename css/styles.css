@@ -1,0 +1,59 @@
+* { padding: 0; margin: 0; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    /*background-color: #99ccff;*/
+    background: #ccc url('/images/background/dp_light.png') no-repeat center top;
+ }
+
+#wrapper { 
+ margin: 0 auto;
+ width: 922px;
+}
+#header {
+ width: 920px;
+ color: #333;
+ border: 1px solid #ccc;
+ height: 120px;
+ /*margin: 10px 0px 0px 0px;*/
+ background: #DAC8BF;
+}
+#pomocni{
+ float: left;
+ width: 103px;
+ height: 32px;
+ color: #333;
+ border: 1px solid #ccc;
+ margin: 0px 0px 0px 0px;
+ background-color:#ffffcc;
+}
+#navigation {
+ width: 920px;
+ height: 32px;
+ color: #333;
+ border: 1px solid #ccc;
+ margin: 0px 0px 0px 0px;
+ background-color:#ffffcc;
+ }
+#content { 
+ width: 900px;
+ color: #333;
+ border: 1px solid #ccc;
+ background:#ffffff;
+ margin: 0px 0px 0px 0px;
+ padding: 10px;
+ height: 530px;
+}
+#footer { 
+ width: 900px;
+ color: #333;
+ border: 1px solid #ccc;
+ background-color:#F3F2ED;
+ margin: 0px 0px 10px 0px;
+ padding: 10px;
+ text-align: center;
+}
+#footer a{
+    color: #000;
+}
