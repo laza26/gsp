@@ -45,6 +45,8 @@ body {
  padding: 10px;
  height: 530px;
 }
+
+/* ---------- Footer ----------  */
 #footer { 
  width: 900px;
  color: #333;
@@ -56,4 +58,13 @@ body {
 }
 #footer a{
     color: #000;
+    text-decoration: none;    
+}
+#footer a:hover{
+    text-decoration: underline;
+}
+
+.footer_links li {
+    display:inline;
+    padding:0 7px 0 4px;
 }

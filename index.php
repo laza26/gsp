@@ -175,11 +175,13 @@ while ($ispis2=mysql_fetch_array($rezulat2))
   
   <!-- Begin Footer -->
   <div id="footer"> 
-      <a href="dnevne_linije.php" target="_blank">Дневне линије</a>
-      <a href="nocne_linije.php" target="_blank">Ноћне линије</a>
-      <a href="karte_i_markice.php" target="_blank">Карте и маркице</a>
-      <a href="promena_rezima.php" target="_blank">Промене режима</a>
-      <a href="informacije.php" target="_blank">Контакт</a>
+      <ul class="footer_links">
+        <li><a href="dnevne_linije.php" target="_blank">Дневне линије</a></li>
+        <li><a href="nocne_linije.php" target="_blank">Ноћне линије</a></li>
+        <li><a href="karte_i_markice.php" target="_blank">Карте и маркице</a></li>
+        <li><a href="promena_rezima.php" target="_blank">Промене режима</a></li>
+        <li><a href="informacije.php" target="_blank">Контакт</a></li>
+      </ul>
   </div>
   <!-- End Footer -->
  </div>
