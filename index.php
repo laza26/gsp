@@ -58,13 +58,14 @@
   </div>
   <!-- End Header -->
   
-  <!-- pomocni -->
+<!--   pomocni 
   <div id="pomocni">
   </div>
-  <!-- end pomocni-->
+   end pomocni-->
   
   <!-- Begin Naviagtion -->
-  <div id="navigation">	
+  <div id="navigation">
+      <div id="meni">
 	<ul id="nav" class="dropdown dropdown-horizontal">
 		<li><a href="index.php">Почетна</a></li>
 		<li class="dir">О ГСП-у
@@ -116,6 +117,7 @@
 			</ul>
 		</li>
 	</ul>
+     </div>
   </div>
   <!-- End Naviagtion -->
   

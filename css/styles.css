@@ -4,7 +4,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     /*background-color: #99ccff;*/
-    background: #ccc url('/images/background/dp_light.png') no-repeat center top;
+    background: #bbb url('/images/background/dp_light_2.png') no-repeat center top;
  }
 
 #wrapper { 
@@ -14,7 +14,7 @@ body {
 #header {
  width: 920px;
  color: #333;
- border: 1px solid #ccc;
+ border: 1px solid #000;
  height: 120px;
  /*margin: 10px 0px 0px 0px;*/
  background: #DAC8BF;
@@ -24,40 +24,49 @@ body {
  width: 103px;
  height: 32px;
  color: #333;
- border: 1px solid #ccc;
+ border: 1px solid #000;
  margin: 0px 0px 0px 0px;
  background-color:#ffffcc;
 }
 #navigation {
  width: 920px;
- height: 32px;
+ height: 33px;
  color: #333;
- border: 1px solid #ccc;
+ border: 1px solid #000;
+ border-top: none;
  margin: 0px 0px 0px 0px;
- background-color:#ffffcc;
+ background-color:#003366;
  }
+ 
+#meni{
+    width:79%;
+    margin: 0 auto;         
+ }
+ 
 #content { 
  width: 900px;
  color: #333;
- border: 1px solid #ccc;
+ border: 1px solid #000;
+ border-top: none;
  background:#ffffff;
  margin: 0px 0px 0px 0px;
  padding: 10px;
- height: 530px;
+ height: 540px;
 }
 
 /* ---------- Footer ----------  */
 #footer { 
  width: 900px;
  color: #333;
- border: 1px solid #ccc;
- background-color:#F3F2ED;
+ border: 1px solid #000;
+ border-top: none;
+ background-color:#003366;
  margin: 0px 0px 10px 0px;
  padding: 10px;
  text-align: center;
 }
 #footer a{
-    color: #000;
+    color: #fff;
     text-decoration: none;    
 }
 #footer a:hover{
@@ -67,4 +76,9 @@ body {
 .footer_links li {
     display:inline;
     padding:0 7px 0 4px;
+    background: url('/images/bg_pipe_w.gif') 100% 60% no-repeat;
+}
+
+.footer_links li:last-child {
+    background: none;
 }

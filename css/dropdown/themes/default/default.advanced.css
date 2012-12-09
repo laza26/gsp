@@ -37,6 +37,7 @@ ul.dropdown li {
 
 ul.dropdown li.dir {
  padding: 7px 20px 7px 10px;
+ cursor: pointer;
 }
 
 ul.dropdown ul li.dir {
