@@ -174,8 +174,12 @@ mysql_close($con);
 
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
-    if ($_REQUEST ['strana']=='galerija')
+    if ($_REQUEST ['strana']) {
         include ($_REQUEST['strana'] . '.php');
+    } else {
+        echo 'home';
+    }
+    
 ?>
 
   </div>
