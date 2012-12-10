@@ -19,7 +19,7 @@
 /* -- Base drop-down styling -- */
 
 ul.dropdown {
- font-weight: bold;
+ /*font-weight: bold;*/
 }
 
 	ul.dropdown li {

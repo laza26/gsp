@@ -2,6 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>ГСП Београд</title>
+        <!-- Google fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Scada:400italic,700italic,400,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+        <!-- end of google fonts -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<link rel="shortcut icon" href="images/icon.png" />
@@ -30,14 +33,7 @@
 	<!-- Moji meniji -->
 	<script src="js/menus.js" type="text/javascript"></script>
 	<!-- End of Moji meniji -->
-	
-<!--	<style type="text/css">
-	
-	body { background-image: url(images/background/blue.png);
-		background-repeat: repeat-x;
-		} 
-	
-	</style>-->
+
 </head>
 <body>
 <!-- Begin Wrapper -->
