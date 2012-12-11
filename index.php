@@ -88,13 +88,7 @@
 				<li><a href="?strana=novosti">Новости</a></li>				
 			</ul>
 		</li>
-		<li class="dir">Остале услуге
-			<ul>
-				<li><a href="marketing.php">Маркетинг</a></li>
-				<li><a href="tehnicki_pregled.php">Технички преглед</a></li>
-				<li><a href="ostale_usluge.php">Остале услуге</a></li>
-			</ul>
-		</li>
+		<li><a href="?strana=marketing">Маркетинг</a></li>
 		<li class="dir">Контакт
 			<ul>
 				<li><a href="informacije.php">Информације о саобраћају</a></li>

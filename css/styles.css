@@ -30,11 +30,6 @@ p{
     display: block;
     margin-right: 20px;
 }
-.crop{
-    width: 200px;
-    height: auto;
-}
-
 #content .alignRight{
     float: right;
     margin-left: 20px;
@@ -42,6 +37,18 @@ p{
 }
 #content .alignCenter{
     margin: auto;
+}
+#content a, #content a:visited{
+    text-decoration:none; 
+    color: #0066cc;
+}
+#content a:hover, #content a:active{
+    text-decoration:underline;
+}
+
+.crop{
+    width: 200px;
+    height: auto;
 }
 
 #wrapper { 
