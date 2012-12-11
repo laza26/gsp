@@ -78,7 +78,7 @@
 		<li><a href="?strana=galerija">Галерија</a></li>
 		<li class="dir">Карте
 			<ul>
-				<li><a href="karte_i_markice.php">Карте и маркице</a></li>
+				<li><a href="?strana=karte_i_markice">Карте и маркице</a></li>
 				<li><a href="cene.php">Цене</a></li>	
 			</ul>
 		</li>
