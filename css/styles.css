@@ -99,6 +99,16 @@ p{
     float: right;
     padding: 10px;
 }
+#leftcolumn{
+    float: left;
+    width: 420px;
+    padding: 10px;
+}
+#rightcolumn{
+    float: right;
+    width: 420px;
+    padding: 10px;
+}
 
 .galerija{
     margin: 0 auto;

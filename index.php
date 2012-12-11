@@ -89,12 +89,7 @@
 			</ul>
 		</li>
 		<li><a href="?strana=marketing">Маркетинг</a></li>
-		<li class="dir">Контакт
-			<ul>
-				<li><a href="informacije.php">Информације о саобраћају</a></li>
-				<li><a href="pisite_nam.php">Пишите нам</a></li>
-			</ul>
-		</li>
+		<li><a href="?strana=kontakt">Контакт</a></li>>
 	</ul>
      </div>
   </div>
