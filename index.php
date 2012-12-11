@@ -72,7 +72,7 @@
 			<ul>
 				<li><a href="dnevne_linije.php">Дневне линије</a></li>
 				<li><a href="nocne_linije.php">Ноћне линије</a></li>
-				<li><a href="skolske_linije.php">Школске линије</a></li>
+				<!--<li><a href="skolske_linije.php">Школске линије</a></li>-->
 			</ul>
 		</li>
 		<li><a href="?strana=galerija">Галерија</a></li>
@@ -84,8 +84,8 @@
 		</li>
 		<li class="dir">Информације
 			<ul>
-				<li><a href="promena_rezima.php">Промена режима</a></li>
-				<li><a href="novosti.php">Новости</a></li>				
+				<li><a href="?strana=promena_rezima">Промена режима</a></li>
+				<li><a href="?strana=novosti">Новости</a></li>				
 			</ul>
 		</li>
 		<li class="dir">Остале услуге

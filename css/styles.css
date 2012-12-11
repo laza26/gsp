@@ -17,6 +17,11 @@ h3{
     text-align: center;
     padding-bottom: 10px;
 }
+h2{
+    text-align: center;
+    padding-bottom: 10px;
+    color: #255e96;
+}
 p{
     text-align: justify;
 }
@@ -34,6 +39,9 @@ p{
     float: right;
     margin-left: 20px;
     margin-right: 0;
+}
+#content .alignCenter{
+    margin: auto;
 }
 
 #wrapper { 
