@@ -11,10 +11,29 @@ body {
 h1{
     text-align: center;
     padding-bottom: 15px;
+    color: #003366;
 }
 h3{
     text-align: center;
     padding-bottom: 10px;
+}
+p{
+    text-align: justify;
+}
+#content img{
+    float: left;
+    display: block;
+    margin-right: 20px;
+}
+.crop{
+    width: 200px;
+    height: auto;
+}
+
+#content .alignRight{
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
 }
 
 #wrapper { 
@@ -54,6 +73,16 @@ h3{
  margin: 0px 0px 0px 0px;
  padding: 10px;
  height: 540px;
+ overflow: auto;
+}
+#content_home{
+    width: 65%;
+    float: left;
+}
+#sidebar_home{
+    width: 30%;
+    float: right;
+    padding: 10px;
 }
 
 .galerija{

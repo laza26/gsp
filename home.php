@@ -1,3 +1,4 @@
+<div id="content_home">
 <?php
 $con = mysql_connect("localhost","root","");
 
@@ -35,3 +36,9 @@ while ($ispis2=mysql_fetch_array($rezulat2))
 
 mysql_close($con);
 ?>
+</div>
+
+<div id="sidebar_home">kurac palac
+<a href="http://www.bgsaobracaj.rs" border=0 target=blank><img src="images/banners/szs.jpg"></a></br>
+<a href="http://www.uitp.org" border=0 target=blank><img src="images/banners/logo_UITP.gif" width="75px" height="58px"></a>
+</div>

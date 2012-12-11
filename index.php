@@ -67,21 +67,7 @@
       <div id="meni">
 	<ul id="nav" class="dropdown dropdown-horizontal">
 		<li><a href="index.php">Почетна</a></li>
-		<li class="dir">О ГСП-у
-			<ul>
-				<li class="dir">Историја
-					<ul>
-						<li><a href="istorija_pocetak.php">Почетак</a></li>
-						<li><a href="istorija_rat.php">Између два рата</a></li>
-						<li><a href="istorija_ostatak.php">Од 1940. до данас</a></li>
-					</ul>
-				</li>
-				<li><a href="delatnost.php">Делатност предузећа</a></li>
-				<li><a href="organizacija.php">Организација предузећа</a></li>
-				<li><a href="poslovna_politika.php">Пословна политика</a></li>
-				<li><a href="vozni_park.php">Возни парк</a></li>
-			</ul>
-		</li>
+		<li><a href="?strana=istorija_pocetak">О ГСП-у</a></li>
 		<li class="dir">Линије
 			<ul>
 				<li><a href="dnevne_linije.php">Дневне линије</a></li>
@@ -122,37 +108,6 @@
   
   <!-- Begin Content -->
   <div id="content">
-	<?php
-//$con = mysql_connect("localhost","root","");
-//
-//if (!$con)
-//   {
-//    die('GRESKA PRILIKOM POVEZIVANJA NA BAZU: ' . mysql_error());	
-//	exit;
-//   }
-//
-//mysql_query("SET NAMES 'UTF8'");
-//mysql_select_db("gsp", $con);
-//$poziv1="SELECT Naziv, Sadrzaj FROM Naslovna WHERE ID=1";
-//$rezulat1=mysql_query($poziv1);
-//$poziv2="SELECT Naziv, Sadrzaj FROM Naslovna WHERE ID=2";
-//$rezulat2=mysql_query($poziv2);
-//
-//if(!$rezulat1){
-//   die('GRESKA U UPITU: ' . mysql_error());
-//   exit;
-//}
-//if(!$rezulat2){
-//   die('GRESKA U UPITU: ' . mysql_error());
-//   exit;
-//}
-//
-//while($ispis1=mysql_fetch_array($rezulat1))
-//{
-//	echo "<h3><center>".$ispis1['Sadrzaj']."</center></h3></br></br>";
-//}
-//mysql_close($con);
-?>
 <!--<br><center>
 <table id="veliki_meni" border=0 cellspacing="4">
 	<tr><td><a href="dnevne_linije.php" target="_blank"><img src="images/meni_naslovna/dnevne_linije.png" name="dnevne_linije" alt="Дневне линије" onMouseover="document.dnevne_linije.src=dnevne_linije_over.src;" onClick="document.dnevne_linije.src=dnevne_linije.src;" onMouseout="document.dnevne_linije.src=dnevne_linije_default.src;" style="border:0;"></a></td>
@@ -162,15 +117,6 @@
 	</tr>
 </table><br><br><br><br><br>-->
 
-<?php
-//while ($ispis2=mysql_fetch_array($rezulat2))
-//{
-//	echo"<p>".$ispis2['Sadrzaj']."</p><br><br>";
-//}
-//?>
-<!--<a href="http://www.bgsaobracaj.rs" border=0 target=blank><img src="images/banners/szs.jpg"></a> &nbsp
-<a href="http://www.uitp.org" border=0 target=blank><img src="images/banners/logo_UITP.gif" width="75px" height="58px"></a>-->
-</center>
 
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
@@ -178,10 +124,8 @@ error_reporting (E_ALL ^ E_NOTICE);
         include ($_REQUEST['strana'] . '.php');
     } else {
         include 'home.php';
-    }
-    
+    }    
 ?>
-
   </div>
   <!-- End Content -->
   
