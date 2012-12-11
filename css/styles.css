@@ -5,6 +5,7 @@ body {
     font-family: 'Scada', sans-serif;
     font-weight: 400;
     font-size: 14px;
+    color: #000;
     background: #bbb url('/images/background/dp_light_2.png') no-repeat center top;
  }
 h1{
@@ -40,13 +41,13 @@ h3{
  }
  
 #meni{
-    width:73%;
+    width:75%;
     margin: 0 auto;         
  }
  
 #content { 
  width: 900px;
- color: #333;
+ color: #000;
  border: 1px solid #000;
  border-top: none;
  background:#ffffff;
@@ -63,7 +64,7 @@ h3{
 .galerija li{
     width: 161px;
     float: left;
-    margin: 0 10px;
+    margin: 0 10px 10px;
 }
 /* ---------- Footer ----------  */
 #footer { 

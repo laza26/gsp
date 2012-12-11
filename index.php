@@ -5,14 +5,14 @@
         <!-- Google fonts -->
         <link href='http://fonts.googleapis.com/css?family=Scada:400italic,700italic,400,700&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
         <!-- end of google fonts -->
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<link rel="shortcut icon" href="images/icon.png" />
         <script src="js/jquery-1.7.2.min.js"></script>
         
         <!-- lightbox -->
-	<link href="css/lightbox.css" rel="stylesheet" />
-	
+	<link href="css/lightbox.css" rel="stylesheet" />	
 	<script src="js/lightbox.js"></script>
 	<!-- end lightbox -->
 	
@@ -123,35 +123,35 @@
   <!-- Begin Content -->
   <div id="content">
 	<?php
-$con = mysql_connect("localhost","root","");
-
-if (!$con)
-   {
-    die('GRESKA PRILIKOM POVEZIVANJA NA BAZU: ' . mysql_error());	
-	exit;
-   }
-
-mysql_query("SET NAMES 'UTF8'");
-mysql_select_db("gsp", $con);
-$poziv1="SELECT Naziv, Sadrzaj FROM Naslovna WHERE ID=1";
-$rezulat1=mysql_query($poziv1);
-$poziv2="SELECT Naziv, Sadrzaj FROM Naslovna WHERE ID=2";
-$rezulat2=mysql_query($poziv2);
-
-if(!$rezulat1){
-   die('GRESKA U UPITU: ' . mysql_error());
-   exit;
-}
-if(!$rezulat2){
-   die('GRESKA U UPITU: ' . mysql_error());
-   exit;
-}
-
+//$con = mysql_connect("localhost","root","");
+//
+//if (!$con)
+//   {
+//    die('GRESKA PRILIKOM POVEZIVANJA NA BAZU: ' . mysql_error());	
+//	exit;
+//   }
+//
+//mysql_query("SET NAMES 'UTF8'");
+//mysql_select_db("gsp", $con);
+//$poziv1="SELECT Naziv, Sadrzaj FROM Naslovna WHERE ID=1";
+//$rezulat1=mysql_query($poziv1);
+//$poziv2="SELECT Naziv, Sadrzaj FROM Naslovna WHERE ID=2";
+//$rezulat2=mysql_query($poziv2);
+//
+//if(!$rezulat1){
+//   die('GRESKA U UPITU: ' . mysql_error());
+//   exit;
+//}
+//if(!$rezulat2){
+//   die('GRESKA U UPITU: ' . mysql_error());
+//   exit;
+//}
+//
 //while($ispis1=mysql_fetch_array($rezulat1))
 //{
 //	echo "<h3><center>".$ispis1['Sadrzaj']."</center></h3></br></br>";
 //}
-mysql_close($con);
+//mysql_close($con);
 ?>
 <!--<br><center>
 <table id="veliki_meni" border=0 cellspacing="4">
@@ -165,9 +165,9 @@ mysql_close($con);
 <?php
 //while ($ispis2=mysql_fetch_array($rezulat2))
 //{
-//	echo"<h4>".$ispis2['Sadrzaj']."</h4><br><br>";
+//	echo"<p>".$ispis2['Sadrzaj']."</p><br><br>";
 //}
-?>
+//?>
 <!--<a href="http://www.bgsaobracaj.rs" border=0 target=blank><img src="images/banners/szs.jpg"></a> &nbsp
 <a href="http://www.uitp.org" border=0 target=blank><img src="images/banners/logo_UITP.gif" width="75px" height="58px"></a>-->
 </center>
@@ -177,7 +177,7 @@ error_reporting (E_ALL ^ E_NOTICE);
     if ($_REQUEST ['strana']) {
         include ($_REQUEST['strana'] . '.php');
     } else {
-        echo 'home';
+        include 'home.php';
     }
     
 ?>
