@@ -111,9 +111,12 @@
 error_reporting (E_ALL ^ E_NOTICE);
     if ($_REQUEST ['strana']) {
         include ($_REQUEST['strana'] . '.php');
-    } else {
-        include 'home.php';
-    }    
+    } 
+        elseif ($_REQUEST['naslov']) 
+            include 'promena_rezima.php';                
+        else {
+            include 'home.php';
+        }
 ?>
   </div>
   <!-- End Content -->
@@ -121,11 +124,11 @@ error_reporting (E_ALL ^ E_NOTICE);
   <!-- Begin Footer -->
   <div id="footer"> 
       <ul class="footer_links">
-        <li><a href="dnevne_linije.php" target="_blank">Дневне линије</a></li>
-        <li><a href="nocne_linije.php" target="_blank">Ноћне линије</a></li>
-        <li><a href="karte_i_markice.php" target="_blank">Карте и маркице</a></li>
-        <li><a href="promena_rezima.php" target="_blank">Промене режима</a></li>
-        <li><a href="informacije.php" target="_blank">Контакт</a></li>
+        <li><a href="?strana=dnevne_linije">Дневне линије</a></li>
+        <li><a href="?strana=nocne_linije">Ноћне линије</a></li>
+        <li><a href="?strana=karte_i_markice">Карте и маркице</a></li>
+        <li><a href="?strana=promena_rezima">Промене режима</a></li>
+        <li><a href="?strana=kontakt">Контакт</a></li>
       </ul>
   </div>
   <!-- End Footer -->

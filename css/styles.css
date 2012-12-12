@@ -92,7 +92,7 @@ p{
 }
 #content_home{
     width: 65%;
-    float: left;
+    float: left;    
 }
 #sidebar_home{
     width: 30%;
@@ -107,6 +107,16 @@ p{
 #rightcolumn{
     float: right;
     width: 420px;
+    padding: 10px;
+}
+#content_pr{
+    width: 30%;
+    float: left;
+    padding: 10px;
+}
+#rightcolumn_pr{
+    width: 65%;
+    float: right;
     padding: 10px;
 }
 
