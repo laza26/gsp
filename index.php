@@ -70,7 +70,7 @@
 		<li><a href="?strana=istorija_pocetak">О ГСП-у</a></li>
 		<li class="dir">Линије
 			<ul>
-				<li><a href="dnevne_linije.php">Дневне линије</a></li>
+				<li><a href="?strana=dnevne_linije">Дневне линије</a></li>
 				<li><a href="nocne_linije.php">Ноћне линије</a></li>
 				<!--<li><a href="skolske_linije.php">Школске линије</a></li>-->
 			</ul>
