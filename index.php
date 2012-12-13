@@ -71,7 +71,7 @@
 		<li class="dir">Линије
 			<ul>
 				<li><a href="?strana=dnevne_linije">Дневне линије</a></li>
-				<li><a href="nocne_linije.php">Ноћне линије</a></li>
+				<li><a href="?strana=nocne_linije">Ноћне линије</a></li>
 				<!--<li><a href="skolske_linije.php">Школске линије</a></li>-->
 			</ul>
 		</li>

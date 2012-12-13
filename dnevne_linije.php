@@ -100,8 +100,8 @@ mysql_close($con);
 <dl class="tramvaji"> 
 	<dt class="zaglavlje1">Број линије</dt>
 	<dd class="zaglavlje1">Траса</dd>
-	<dt><a href="2.php"><?php echo $ispis1['Broj_linije'];?></a></dt>
-	<dd><a href="2.php"><?php echo $ispis1['Trasa'];?></a></dd>
+	<dt><a href="?strana=linija2"><?php echo $ispis1['Broj_linije'];?></a></dt>
+	<dd><a href="?strana=linija2"><?php echo $ispis1['Trasa'];?></a></dd>
 	<dt><a href="3.php"><?php echo $ispis2['Broj_linije'];?></dt>
 	<dd><a href="3.php"><?php echo $ispis2['Trasa'];?></a></dd>
 	<dt><a href="5.php"><?php echo $ispis3['Broj_linije'];?></a></dt>
