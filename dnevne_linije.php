@@ -137,15 +137,15 @@ mysql_close($con);
 <dl class="autobusi">
 	<dt class="zaglavlje3">Број линије</dt>
 	<dd class="zaglavlje3">Траса</dd>
-	<dt><a href="15.php"><?php echo $ispis11['Broj_linije'];?></a></dt>
-	<dd><a href="15.php"><?php echo $ispis11['Trasa'];?></a></dd>
-	<dt><a href="16.php"><?php echo $ispis12['Broj_linije'];?></a></dt>
-	<dd><a href="16.php"><?php echo $ispis12['Trasa'];?></a></dd>
-	<dt><a href="17.php"><?php echo $ispis13['Broj_linije'];?></a></dt>
-	<dd><a href="17.php"><?php echo $ispis13['Trasa'];?></a></dd>
-	<dt><a href="18.php"><?php echo $ispis14['Broj_linije'];?></a></dt>
-	<dd><a href="18.php"><?php echo $ispis14['Trasa'];?></a></dd>
-	<dt><a href="20.php"><?php echo $ispis15['Broj_linije'];?></a></dt>
-	<dd><a href="20.php"><?php echo $ispis15['Trasa'];?></a></dd>
+	<dt><a href="?strana=linija15"><?php echo $ispis11['Broj_linije'];?></a></dt>
+	<dd><a href="?strana=linija15"><?php echo $ispis11['Trasa'];?></a></dd>
+	<dt><a href="?strana=linija16"><?php echo $ispis12['Broj_linije'];?></a></dt>
+	<dd><a href="?strana=linija16"><?php echo $ispis12['Trasa'];?></a></dd>
+	<dt><a href="?strana=linija17"><?php echo $ispis13['Broj_linije'];?></a></dt>
+	<dd><a href="?strana=linija17"><?php echo $ispis13['Trasa'];?></a></dd>
+	<dt><a href="?strana=linija18"><?php echo $ispis14['Broj_linije'];?></a></dt>
+	<dd><a href="?strana=linija18"><?php echo $ispis14['Trasa'];?></a></dd>
+	<dt><a href="?strana=linija20"><?php echo $ispis15['Broj_linije'];?></a></dt>
+	<dd><a href="?strana=linija20"><?php echo $ispis15['Trasa'];?></a></dd>
 </dl>
 <!-- Kraj tabele autobusi -->

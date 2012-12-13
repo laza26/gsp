@@ -1,169 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>ГСП Београд | Линија 20</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" href="css/styles_2cl.css" />
-<link rel="shortcut icon" href="images/icon.png">
-
-	<!-- Slider -->
-	<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="themes/default/default.css" type="text/css" media="screen" />
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-	<script src="js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
-	<!-- End of Slider -->
-	
-	<!-- Glavni meni -->
-		<link href="css/dropdown/dropdown.css" media="screen" rel="stylesheet" type="text/css" />
-		<link href="css/dropdown/themes/default/default.advanced.css" media="screen" rel="stylesheet" type="text/css" />
-	<!-- / END -->
-	
-	<script src="js/menus.js" type="text/javascript"></script>
-	
-	<style type="text/css">
-p1{font-size:10px;}
-	<!--
-	body { background-image: url(images/background/blue.png);
-		background-repeat: repeat-x;
-		}
-	-->
-
-#stajalista{
-width:100%;
-border-collapse:collapse;
-}
-#stajalista td, #stajalista th {
-border:1px solid #003399;
-}
-#stajalista th {
-text-align:center;
-background-color:#003399;
-color:#FFFFFF;
-}
-	
-#polasci
-{
-width:600px;
-border-collapse:collapse;
-}
-#polasci td, #polasci th 
-{
-border:1px solid #0066cc;
-}
-#polasci th 
-{
-text-align:center;
-background-color:#0066cc;
-color:#FFFFFF;
-}
-#polasci tr.alt td 
-{
-color:#000000;
-background-color:#99ccff;
-}
-	</style>
-</head>
-<body>
-<!-- Begin Wrapper -->
-<div id="wrapper">
-  <!-- Begin Header -->
-  <div id="header">
-		<!-- Begin Slider -->
-	<div class="slider-wrapper theme-default">
-		<div id="slider" class="nivoSlider">
-			<a href="index.php"><img src="images/header/slider_bus.jpg" alt="" /></a>
-			<a href="index.php"><img src="images/header/slider_trola.jpg" alt="" /></a>
-			<a href="index.php"><img src="images/header/slider_tramvaj.jpg" alt="" /></a>
-		</div>
-	</div>
-	<div id="htmlcaption" class="nivo-html-caption">
-		<strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
-	</div>
-	
-	<script type="text/javascript">
-		$(window).load(function() {
-		$('#slider').nivoSlider();
-		});
-	</script>
-	<!-- End Slider-->
-  </div>
-  <!-- End Header -->
-  
-  <!-- pomocni -->
-  <div id="pomocni">
-  </div>
-  <!-- end pomocni-->
-  
-  <!-- Begin Navigation -->
-  <div id="navigation">
-	<ul id="nav" class="dropdown dropdown-horizontal">
-		<li><a href="index.php">Почетна</a></li>
-		<li class="dir">О ГСП-у
-			<ul>				
-				<li class="dir">Историја
-					<ul>
-						<li><a href="istorija_pocetak.php">Почетак</a></li>
-						<li><a href="istorija_rat.php">Између два рата</a></li>
-						<li><a href="istorija_ostatak.php">Од 1940. до данас</a></li>
-					</ul>
-				</li>
-				<li><a href="delatnost.php">Делатност предузећа</a></li>
-				<li><a href="organizacija.php">Организација предузећа</a></li>
-				<li><a href="poslovna_politika.php">Пословна политика</a></li>
-				<li><a href="vozni_park.php">Возни парк</a></li>
-			</ul>
-		</li>
-		<li class="dir">Линије
-			<ul>
-				<li><a href="dnevne_linije.php">Дневне линије</a></li>
-				<li><a href="nocne_linije.php">Ноћне линије</a></li>
-				<li><a href="skolske_linije.php">Школске линије</a></li>
-			</ul>
-		</li>
-		<li><a href="galerija.php">Галерија</a></li>
-		<li class="dir">Карте
-			<ul>
-				<li><a href="karte_i_markice.php">Карте и маркице</a></li>
-				<li><a href="cene.php">Цене</a></li>	
-			</ul>
-		</li>
-		<li class="dir">Информације
-			<ul>
-				<li><a href="promena_rezima.php">Промена режима</a></li>
-				<li><a href="novosti.php">Новости</a></li>
-			</ul>
-		</li>
-		<li class="dir">Остале услуге
-			<ul>
-				<li><a href="marketing.php">Маркетинг</a></li>
-				<li><a href="tehnicki_pregled.php">Технички преглед</a></li>
-				<li><a href="ostale_usluge.php">Остале услуге</a></li>
-			</ul>
-		</li>
-		<li class="dir">Контакт
-			<ul>
-				<li><a href="informacije.php">Информације о саобраћају</a></li>
-				<li><a href="pisite_nam.php">Пишите нам</a></li>
-			</ul>
-		</li>
-	</ul>
-  </div>
-  <!-- End Navigation -->
-  
-  <!-- Begin Left Column -->
-  <div id="leftcolumn"> <h2>Пречице:</h2><br>
-  <center><table id="levi_meni">
-	<tr><td><a href="dnevne_linije.php"><img src="images/buttons/mali_meni/dl2.png" name="dl" alt="Дневне линије" onMouseover="document.dl.src=dl_over.src;" onClick="document.dl.src=dl_default.src;" onMouseout="document.dl.src=dl_default.src;" style="border:0;"></a></td></tr>
-	<tr><td><a href="nocne_linije.php"><img src="images/buttons/mali_meni/nl2.png" name="nl" alt="Ноћне линије" onMouseover="document.nl.src=nl_over.src;" onClick="document.nl.src=nl_default.src;" onMouseout="document.nl.src=nl_default.src;" style="border:0;"></a></td></tr>
-	<tr><td><a href="karte_i_markice.php"><img src="images/buttons/mali_meni/kim2.png" name="kim" alt="Карте и маркице" onMouseover="document.kim.src=kim_over.src;" onClick="document.kim.src=kim_default.src;" onMouseout="document.kim.src=kim_default.src;" style="border:0;"></a></td></tr>
-	<tr><td><a href="promena_rezima.php"><img src="images/buttons/mali_meni/ir2.png" name="ir" alt="Измене режима" onMouseover="document.ir.src=ir_over.src;" onClick="document.ir.src=ir_default.src;" onMouseout="document.ir.src=ir_default.src;" style="border:0;"></a></td></tr>
-  </table></center>
-  </div>
-  <!-- End Left Column -->
-  
-  <!-- Begin Right Column -->
-  <div id="rightcolumn">
-
 <?php
 $con = mysql_connect("localhost","root","");
 
@@ -222,13 +56,13 @@ if(!$rezultat1){
 
 while($ispis1=mysql_fetch_array($rezultat1))
 {
-	echo "<center><h2>Линија ".$ispis1['Broj_linije']."</h2></center></br>";
-	echo "<center><h3>".$ispis1['Trasa']."</h3></center></br></br>";
+	echo "<h2>Линија ".$ispis1['Broj_linije']."</h2>";
+	echo "<h3>".$ispis1['Trasa']."</h3>";
 }	
 mysql_close($con);	
 ?>
-	
-<center><table id="stajalista">	<!-- Tabela stajalista -->
+<!-- Tabela stajalista -->	
+<table class="stajalista">
 	<tr>
 		<th>Смер</th>
 		<th>Улице</th>
@@ -244,9 +78,9 @@ while ($i1 < $redovi1){
 ?>
 
 <tr>
-	<td><center><?php echo $f1; ?></center></td>
-	<td><center><?php echo $f2; ?></center></td>
-	<td><center><p1><?php echo $f3; ?></p1></center></td>
+	<td><?php echo $f1; ?></td>
+	<td><?php echo $f2; ?></td>
+	<td class="smalltext"><?php echo $f3; ?></td>
 </tr>
 <?php
 $i1++;
@@ -262,105 +96,95 @@ while ($i2 < $redovi2){
 ?>
 
 <tr>
-	<td><center><?php echo $f4; ?></center></td>
-	<td><center><?php echo $f5; ?></center></td>
-	<td><center><p1><?php echo $f6; ?></p1></center></td>
+	<td><?php echo $f4; ?></td>
+	<td><?php echo $f5; ?></td>
+	<td class="smalltext"><?php echo $f6; ?></td>
 </tr>
 <?php
 $i2++;
 }	//kraj druge while petlje
 ?>
-</table></center> <!-- Kraj tabele stajališta -->
+</table>
+<!-- Kraj tabele stajališta -->
 <br><br>
-<center><h3>Поласци са терминуса</h3></center><br>
+<h3>Поласци са терминуса</h3>
 
 <!-- Tabela polazaka terminus 1-->
-<center><table id="polasci">
+<table class="polasci">
 	<tr>
-	<th colspan="9"><?php echo $ispis3['Terminus'];?></th>
+	<th colspan="9"><?php echo $ispis3['Terminus'];?> (Смер А)</th>
 	</tr>
 	<tr class="alt">
 		<td colspan="3"></td>
-		<td colspan="3" class="alt1"><center><b>Прва три:</b></center></td>
-		<td colspan="3"><center><b>Последња три:</b></center></td>
+		<td colspan="3"><b>Прва три:</b></td>
+		<td colspan="3"><b>Последња три:</b></td>
 	</tr>
 	<tr>
-		<td colspan="3"><center><b><?php echo $ispis3['Dan']; ?></b></center></td>
-		<td><center><?php echo $ispis3['Prvi_polazak'];?></center></td>
-		<td><center><?php echo $ispis3['Drugi_polazak'];?></center></td>
-		<td><center><?php echo $ispis3['Treci_polazak'];?></center></td>
-		<td><center><?php echo $ispis3['Treci_od_pozadi'];?></center></td>
-		<td><center><?php echo $ispis3['Pretposlednji'];?></center></td>
-		<td><center><?php echo $ispis3['Poslednji'];?></center></td>		
+		<td colspan="3"><b><?php echo $ispis3['Dan']; ?></b></td>
+		<td><?php echo $ispis3['Prvi_polazak'];?></td>
+		<td><?php echo $ispis3['Drugi_polazak'];?></td>
+		<td><?php echo $ispis3['Treci_polazak'];?></td>
+		<td><?php echo $ispis3['Treci_od_pozadi'];?></td>
+		<td><?php echo $ispis3['Pretposlednji'];?></td>
+		<td><?php echo $ispis3['Poslednji'];?></td>		
 	</tr>
 	<tr>
-		<td colspan="3"><center><b><?php echo $ispis4['Dan']; ?></b></center></td>
-		<td><center><?php echo $ispis4['Prvi_polazak'];?></center></td>
-		<td><center><?php echo $ispis4['Drugi_polazak'];?></center></td>
-		<td><center><?php echo $ispis4['Treci_polazak'];?></center></td>
-		<td><center><?php echo $ispis4['Treci_od_pozadi'];?></center></td>
-		<td><center><?php echo $ispis4['Pretposlednji'];?></center></td>
-		<td><center><?php echo $ispis4['Poslednji'];?></center></td>		
+		<td colspan="3"><b><?php echo $ispis4['Dan']; ?></b></td>
+		<td><?php echo $ispis4['Prvi_polazak'];?></td>
+		<td><?php echo $ispis4['Drugi_polazak'];?></td>
+		<td><?php echo $ispis4['Treci_polazak'];?></td>
+		<td><?php echo $ispis4['Treci_od_pozadi'];?></td>
+		<td><?php echo $ispis4['Pretposlednji'];?></td>
+		<td><?php echo $ispis4['Poslednji'];?></td>		
 	</tr>
 		<tr>
-		<td colspan="3"><center><b><?php echo $ispis5['Dan']; ?></b></center></td>
-		<td><center><?php echo $ispis5['Prvi_polazak'];?></center></td>
-		<td><center><?php echo $ispis5['Drugi_polazak'];?></center></td>
-		<td><center><?php echo $ispis5['Treci_polazak'];?></center></td>
-		<td><center><?php echo $ispis5['Treci_od_pozadi'];?></center></td>
-		<td><center><?php echo $ispis5['Pretposlednji'];?></center></td>
-		<td><center><?php echo $ispis5['Poslednji'];?></center></td>		
+		<td colspan="3"><b><?php echo $ispis5['Dan']; ?></b></td>
+		<td><?php echo $ispis5['Prvi_polazak'];?></td>
+		<td><?php echo $ispis5['Drugi_polazak'];?></td>
+		<td><?php echo $ispis5['Treci_polazak'];?></td>
+		<td><?php echo $ispis5['Treci_od_pozadi'];?></td>
+		<td><?php echo $ispis5['Pretposlednji'];?></td>
+		<td><?php echo $ispis5['Poslednji'];?></td>		
 	</tr>
-</table></center><br><br>
+</table><br><br>
 <!-- Kraj prve tabele polazaka -->
 
 <!-- Tabela polazaka terminus 2-->
-<center><table id="polasci">
-	<tr>
-	<th colspan="9"><?php echo $ispis6['Terminus'];?></th>
-	</tr>
+<table class="polasci">
+    <tr>
+        <th colspan="9"><?php echo $ispis3['Terminus'];?> (Смер Б)</th>
+    </tr>
 	<tr class="alt">
 		<td colspan="3"></td>
-		<td colspan="3"><center><b>Прва три:</b></center></td>
-		<td colspan="3"><center><b>Последња три:</b></center></td>
+		<td colspan="3"><b>Прва три:</b></td>
+		<td colspan="3"><b>Последња три:</b></td>
 	</tr>
 	<tr>
-		<td colspan="3"><center><b><?php echo $ispis6['Dan']; ?></b></center></td>
-		<td><center><?php echo $ispis6['Prvi_polazak'];?></center></td>
-		<td><center><?php echo $ispis6['Drugi_polazak'];?></center></td>
-		<td><center><?php echo $ispis6['Treci_polazak'];?></center></td>
-		<td><center><?php echo $ispis6['Treci_od_pozadi'];?></center></td>
-		<td><center><?php echo $ispis6['Pretposlednji'];?></center></td>
-		<td><center><?php echo $ispis6['Poslednji'];?></center></td>		
+		<td colspan="3"><b><?php echo $ispis6['Dan']; ?></b></td>
+		<td><?php echo $ispis6['Prvi_polazak'];?></td>
+		<td><?php echo $ispis6['Drugi_polazak'];?></td>
+		<td><?php echo $ispis6['Treci_polazak'];?></td>
+		<td><?php echo $ispis6['Treci_od_pozadi'];?></td>
+		<td><?php echo $ispis6['Pretposlednji'];?></td>
+		<td><?php echo $ispis6['Poslednji'];?></td>		
 	</tr>
 	<tr>
-		<td colspan="3"><center><b><?php echo $ispis7['Dan']; ?></b></center></td>
-		<td><center><?php echo $ispis7['Prvi_polazak'];?></center></td>
-		<td><center><?php echo $ispis7['Drugi_polazak'];?></center></td>
-		<td><center><?php echo $ispis7['Treci_polazak'];?></center></td>
-		<td><center><?php echo $ispis7['Treci_od_pozadi'];?></center></td>
-		<td><center><?php echo $ispis7['Pretposlednji'];?></center></td>
-		<td><center><?php echo $ispis7['Poslednji'];?></center></td>		
+		<td colspan="3"><b><?php echo $ispis7['Dan']; ?></b></td>
+		<td><?php echo $ispis7['Prvi_polazak'];?></td>
+		<td><?php echo $ispis7['Drugi_polazak'];?></td>
+		<td><?php echo $ispis7['Treci_polazak'];?></td>
+		<td><?php echo $ispis7['Treci_od_pozadi'];?></td>
+		<td><?php echo $ispis7['Pretposlednji'];?></td>
+		<td><?php echo $ispis7['Poslednji'];?></td>		
 	</tr>
 		<tr>
-		<td colspan="3"><center><b><?php echo $ispis8['Dan']; ?></b></center></td>
-		<td><center><?php echo $ispis8['Prvi_polazak'];?></center></td>
-		<td><center><?php echo $ispis8['Drugi_polazak'];?></center></td>
-		<td><center><?php echo $ispis8['Treci_polazak'];?></center></td>
-		<td><center><?php echo $ispis8['Treci_od_pozadi'];?></center></td>
-		<td><center><?php echo $ispis8['Pretposlednji'];?></center></td>
-		<td><center><?php echo $ispis8['Poslednji'];?></center></td>		
+		<td colspan="3"><b><?php echo $ispis8['Dan']; ?></b></td>
+		<td><?php echo $ispis8['Prvi_polazak'];?></td>
+		<td><?php echo $ispis8['Drugi_polazak'];?></td>
+		<td><?php echo $ispis8['Treci_polazak'];?></td>
+		<td><?php echo $ispis8['Treci_od_pozadi'];?></td>
+		<td><?php echo $ispis8['Pretposlednji'];?></td>
+		<td><?php echo $ispis8['Poslednji'];?></td>		
 	</tr>
-</table></center><br>
+</table></br>
 <!-- Kraj druge tabele polazaka -->
-
-  </div>
-  <!-- End Right Column -->
-  
-  <!-- Begin Footer -->
-  <div id="footer"> Подножје </div>
-  <!-- End Footer -->
- </div>
-<!-- End Wrapper -->
-</body>
-</html>
