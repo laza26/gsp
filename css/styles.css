@@ -201,6 +201,47 @@ p{
     float: left;
     margin: 0 10px 10px;
 }
+
+.stajalista{
+    width:600px;
+    border-collapse:collapse;
+    margin: 0 auto;
+}
+.stajalista td, .stajalista th {
+    border:1px solid #003366;
+}
+.stajalista th {
+    text-align:center;
+    background-color:#003366;
+    color:#fff;
+}
+.stajalista td{
+    text-align: justify;
+    padding: 10px;    
+}
+.smalltext{
+    font-size: 11px;
+    color:#003366;
+}
+	
+.polasci{
+    width:600px;
+    border-collapse:collapse;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 22px;
+}
+.polasci td, .polasci th {
+    border:1px solid #003366;
+}
+.polasci th {
+    background-color:#003366;
+    color:#fff;
+}
+.polasci tr.alt td {
+    color:#000;
+    background-color:#ccc;
+}
 /* ---------- Footer ----------  */
 #footer { 
  width: 900px;
