@@ -113,7 +113,7 @@ mysql_close($con);
 </dl>
     <!-- Kraj tabele tramvaji -->
 
-</br></br><h2>Тролејбуске линије</h2>
+<h2>Тролејбуске линије</h2>
 
 <!-- Tabela trolejbusi-->
 <dl class="trolejbusi">
@@ -132,7 +132,7 @@ mysql_close($con);
 </dl>
 <!-- Kraj tabele trolejbusi -->
 
-</br></br><h2>Аутобуске линије</h2>
+<h2>Аутобуске линије</h2>
 <!-- Tabela autobusi-->
 <dl class="autobusi">
 	<dt class="zaglavlje3">Број линије</dt>
