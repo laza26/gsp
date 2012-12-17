@@ -22,7 +22,7 @@ $ispis3=mysql_fetch_array($rezultat3);
 $poziv4="SELECT Broj_linije, Trasa FROM Nocne_linije WHERE ID=4";
 $rezultat4=mysql_query($poziv4);
 $ispis4=mysql_fetch_array($rezultat4);
-$poziv5="SELECT Broj_linije, Trasa FROM Nocne_linije WHERE ID=7";
+$poziv5="SELECT Broj_linije, Trasa FROM Nocne_linije WHERE ID=6";
 $rezultat5=mysql_query($poziv5);
 $ispis5=mysql_fetch_array($rezultat5);
 

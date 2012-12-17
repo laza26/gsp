@@ -242,6 +242,35 @@ p{
     color:#000;
     background-color:#ccc;
 }
+#uzi{
+    width:600px;
+    margin:0 auto;
+}
+.nocne{
+    padding: 15px 0;    
+}
+.nocneTab{
+    width: 600px;
+    margin: 0 auto;
+    float: left;
+    list-style: none;    
+    text-align: center;
+    padding-bottom: 30px;
+    display: block;
+}
+.nocneTab li{
+    width: 198px;
+    float: left;
+    display: block;
+    border: 1px solid #003366;
+    border-top: none;
+    line-height: 22px;
+}
+.nocneTab li.zaglavlje5, zaglavlje5{
+    background: #003366;
+    font-weight: 700;
+    color: #fff;
+}
 /* ---------- Footer ----------  */
 #footer { 
  width: 900px;
