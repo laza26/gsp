@@ -53,6 +53,6 @@ mysql_close($con);
 	<dd><a href="?strana=linija26N"><?php echo $ispis3['Trasa'];?></a></dd>
 	<dt><a href="?strana=linija27N"><?php echo $ispis4['Broj_linije'];?></a></dt>
 	<dd><a href="?strana=linija27N"><?php echo $ispis4['Trasa'];?></a></dd>
-	<dt><a href="?strana=linija32N"><?php echo $ispis5['Broj_linije'];?></a></dt>
-	<dd><a href="?strana=linija32N"><?php echo $ispis5['Trasa'];?></a></dd>
+	<dt><a href="?strana=linija31N"><?php echo $ispis5['Broj_linije'];?></a></dt>
+	<dd><a href="?strana=linija31N"><?php echo $ispis5['Trasa'];?></a></dd>
 </dl>
