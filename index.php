@@ -79,7 +79,7 @@
 		<li class="dir">Карте
 			<ul>
 				<li><a href="?strana=karte_i_markice">Карте и маркице</a></li>
-				<li><a href="cene.php">Цене</a></li>	
+				<li><a href="?strana=cene">Цене</a></li>	
 			</ul>
 		</li>
 		<li class="dir">Информације
