@@ -1,0 +1,104 @@
+body{
+	font-family:Tahoma,Verdana,Arial;
+	font-size:12px;
+	color:#333;
+	text-align: center;
+}
+#kontejner{
+	width:100%;	
+	text-align: left;
+}
+
+a {
+	color: #333;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+.header{
+	background-color:#f8f8f8;
+	color:#333;
+}
+
+.meni{
+	border-right:1px solid #f8f8f8;
+	text-align:left;	
+}
+
+.crta{
+	height:7px;
+	font-size:0px;
+	background-color:#7a5fb4;
+	width:200px;
+}
+.footer{
+	height:20px;
+	text-align:center;
+	background-color:#f8f8f8;
+	color:#333;
+}
+
+.lokacije{
+	width:540px;
+	border:1px solid #333;
+	
+}
+.lokacije_new{
+	width:540px;
+	border:1px solid #333;
+	
+}
+.regija_select{
+	width: 165px;	
+	background-color:#ffffff;
+	border:1px solid #333;
+	font-family:Tahoma,Verdana,Arial;
+	
+	color:#333;
+	
+}
+.txtbox{
+    border:1px solid #333;
+	font-family:Tahoma,Verdana,Arial;
+	
+	color:#333;	
+	background-color:#ffffff;
+	text-indent:2px;
+}
+.btn{
+    border:1px solid #333;
+	font-family:Tahoma,Verdana,Arial;
+	
+	color:#333;	
+	background-color:#f8f8f8;	
+}
+.forma{
+    margin: 0 auto;
+    width: 400px;       
+}
+.forma dt{
+    float: left;
+    width: 50px;
+    display: block;
+    text-align: right;
+}
+.forma dd{
+    float: left;
+    display: block;
+    width: 350px;
+    margin-left: 0;
+}
+.forma textarea {
+    float: left;
+    width: 200px;
+    height: 125px;
+    margin-left: 10px;
+}
+.polje{
+    width: 200px;
+    float: left;
+    margin-left: 10px;
+}

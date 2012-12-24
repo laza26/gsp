@@ -2,7 +2,7 @@
 <h1>Цене карата и претплатних легитимација</h1>
 <h2>Појединачне карте</h2>
     <h3>Категорија: </h3>		
-        <form id="pojedinacne" action="cene.php" method="post">
+        <form id="pojedinacne" class="karte" action="cene.php" method="post">
             <select>
 		<option value="1">ИТС1</option>
 		<option value="2">ИТС2</option>

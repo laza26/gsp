@@ -290,6 +290,10 @@ p{
     font-weight: 700;
     color: #fff;
 }
+.karte{
+    margin: 0 auto;
+    width: 300px;
+}
 /* ---------- Footer ----------  */
 #footer { 
  width: 900px;
