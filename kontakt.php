@@ -45,32 +45,32 @@ while($ispis1=mysql_fetch_array($rezultat1))
 	echo "<p>".$ispis1['Sadrzaj']."</p></br>";
 }
 
-echo "<h3>Диспечерски центар ради нон стоп, од 00:24 сваког дана</h3></br></br>";
-echo "<h3>Контакт телефони:</h3><br>";
+echo "<h3>Диспечерски центар ради нон стоп, од 00:24 сваког дана</h3></br>";
+echo "<h3>Контакт телефони:</h3>";
 
 while($ispis2=mysql_fetch_array($rezultat2))
 {
-    echo "<b>".$ispis2['Naziv']."</b> ".$ispis2['Sadrzaj']."</br></br>";
+    echo "<b>".$ispis2['Naziv']."</b> ".$ispis2['Sadrzaj']."</br>";
 }
 
 while($ispis3=mysql_fetch_array($rezultat3))
 {
-    echo "<b>".$ispis3['Naziv']."</b> ".$ispis3['Sadrzaj']."</br></br>";
+    echo "<b>".$ispis3['Naziv']."</b> ".$ispis3['Sadrzaj']."</br>";
 }
 
 while($ispis4=mysql_fetch_array($rezultat4))
 {
-    echo "<b>".$ispis4['Naziv']."</b> ".$ispis4['Sadrzaj']."</br></br>";
+    echo "<b>".$ispis4['Naziv']."</b> ".$ispis4['Sadrzaj']."</br>";
 }
 
 while($ispis5=mysql_fetch_array($rezultat5))
 {
-    echo "<b>".$ispis5['Naziv']."</b> ".$ispis5['Sadrzaj']."</br></br>";
+    echo "<b>".$ispis5['Naziv']."</b> ".$ispis5['Sadrzaj']."</br>";
 }
 
 while($ispis6=mysql_fetch_array($rezultat6))
 {
-    echo "<b>".$ispis6['Naziv']."</b> ".$ispis6['Sadrzaj']."</br></br>";
+    echo "<b>".$ispis6['Naziv']."</b> ".$ispis6['Sadrzaj']."</br>";
 }
 mysql_close($con);
 ?>
@@ -93,32 +93,26 @@ $rezultat11=mysql_query($poziv11);
 
 while($ispis11=mysql_fetch_array($rezultat11))
 {
-    echo "<center><h2>".$ispis11['Naziv']."</h2></center></br>";
-    echo $ispis11['Sadrzaj']."</br></br></br>";
+    echo "<h2>".$ispis11['Naziv']."</h2></br>";
+    echo "<p>".$ispis11['Sadrzaj']."</p></br></br></br>";
 }
 
 mysql_close($con);
 ?>
 
 <!-- Kontakt tabela -->
-	<table><form id="forma" action="kontakt.php?p=10" method="post" onSubmit="return provera()">
-	<tr>
-		<td>Ваше име:</td>
-		<td><input type="text" id="ime" name="ime"></td>
-	</tr>
-	<tr>
-		<td>E-mail:</td>
-		<td><input type="text" id="mail" name="mail"></td>		
-	</tr>
-	<tr>
-		<td>Ваша порука:</td>
-		<td><textarea id="ime" name="ime" cols="20" rows="3"></textarea></td>
-	</tr>
-	<tr>
-		<td><input type="reset" value="Обриши"/></td>
-		<td><input type="submit" name="submit" value="Пошаљи"/></td>
-	</tr>
-	</form></table>
+	<form id="forma" action="kontakt.php?p=10" method="post" onSubmit="return provera()">
+            <dl class="kontac">
+		<dt>Ваше име:</dt>
+		<dd><input type="text" id="ime" class="kontacForma" name="ime"></dd>   
+		<dt>E-mail:</dt>
+		<dd><input type="text" id="mail" class="kontacForma" name="mail"></dd>		
+		<dt>Ваша порука:</dt>
+		<dd><textarea id="poruka" name="poruka"></textarea></dd>
+		<dt><input type="reset" value="Обриши"/></dt>
+		<dd><input type="submit" name="submit" value="Пошаљи"/></dd>
+            </dl>
+	</form>
 <!-- Kraj kontakt tabele -->
 
 <?php

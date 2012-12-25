@@ -294,6 +294,40 @@ p{
     margin: 0 auto;
     width: 300px;
 }
+.kontac{
+    width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+.kontac dt{
+    float: left;
+    width: 100px;
+    display: block;
+    text-align: right;
+}
+.kontac dd{
+    float: left;
+    width: 190px;
+    margin-left: 10px;
+}
+.kontacForma {
+    width: 200px;
+    height: 18px;
+    border: 1px solid #003366;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+.kontac textarea {
+    height: 125px;
+    width: 200px;
+    border: 1px solid #003366;    
+    margin-bottom: 10px;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
 /* ---------- Footer ----------  */
 #footer { 
  width: 900px;

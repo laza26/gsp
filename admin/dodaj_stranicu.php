@@ -2,7 +2,7 @@
     $id = $naslov = $tekst = "";
     
     if(!empty($_POST) && empty($_POST['id'])) {
-        //kreiranje novog
+        //kreiranje nove stranice
         $naslov = $_POST['naslov'];
         $tekst = $_POST['tekst'];
         
@@ -10,11 +10,11 @@
         $db = konekcija();
         mysql_query($sql);
         
-        echo 'Članak je uspešno dodat!';
+        echo 'Stranica je uspešno dodata!';
     }
     
     if(!empty($_POST) && !empty($_POST['id'])) {
-        //editovanje starog
+        //editovanje postojece stranice
         $naslov = $_POST['naslov'];
         $tekst = $_POST['tekst'];
         $id = $_POST['id'];
@@ -23,11 +23,11 @@
         konekcija();
         mysql_query($sql);
         
-        echo 'Izmene su uspešno snimljene!';
+        echo 'Izmene su uspešno sačuvane!';
     }
     
     if(!empty($_REQUEST['ID'])) {
-        //dohvatiti podatke
+        //dohvatanje podataka
         $id = $_REQUEST['ID'];
         
         konekcija();

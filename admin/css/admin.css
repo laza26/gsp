@@ -96,9 +96,11 @@ a:hover {
     width: 200px;
     height: 125px;
     margin-left: 10px;
+    border: 1px solid #000;
 }
 .polje{
     width: 200px;
     float: left;
     margin-left: 10px;
+    border: 1px solid #000;
 }
