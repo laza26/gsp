@@ -109,6 +109,7 @@
 
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
+include 'inc/baza.php';
     if ($_REQUEST ['strana']) {
         include ($_REQUEST['strana'] . '.php');
     } 

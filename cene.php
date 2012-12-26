@@ -1,16 +1,52 @@
+<?php
+    konekcija();
+    $sql = "SELECT * FROM `pojedinacne_karte`";
+    $result = mysql_query($sql);
+    $karte = array();
+
+    while ($row = mysql_fetch_array($result, MYSQL_NUM)) {
+        $karte[$row[1]][] = $row;
+    }
+?>
 <div id="uzi">
-<h1>Цене карата и претплатних легитимација</h1>
-<h2>Појединачне карте</h2>
-    <h3>Категорија: </h3>		
-        <form id="pojedinacne" class="karte" action="cene.php" method="post">
-            <select>
-		<option value="1">ИТС1</option>
-		<option value="2">ИТС2</option>
-		<option value="3">Експрес линије у приградском саобраћају</option>
-		<option value="4">Линије локалног саобраћаја</option>
-		<option value="5">Доплатна карта Београд-Обреновац</option>
-		<option value="6">Е-линије ван ИТС1 и ИТС2</option>
-		<option value="7">Е-линија Аеродром</option>
-            </select>
-        </form>
-</div>    
+    <h1>Цене карата и претплатних легитимација</h1>
+    <h2>Појединачне карте</h2>
+    <h3>Категорија:</h3>		        
+    <select onchange="prikazi_opcije(this.value)">
+        <option value='0'>Молимо одаберите опцију</option>
+        <?php
+        foreach ($karte as $key => $val)
+            echo "<option value='$key'>$key</option>";
+        ?>
+    </select>
+    <select onchange="" id="opcije"></select>
+    
+    <div id="zona_i_cena"></div>
+</div>
+
+<script>
+    karte=<?php echo json_encode($karte); ?>;
+    function prikazi_opcije(vrednost){
+        var prethodna_vrednost = "";
+        
+        jQuery('#opcije').children().remove();
+        jQuery('#zona_i_cena').children().remove();
+        
+        jQuery('#opcije').append("<option value='0'>Молимо одаберите опцију</option>");
+        for(i = 0; i<karte[vrednost].length; i++) {
+            if(prethodna_vrednost != karte[vrednost][i][2]) {
+                prethodna_vrednost = karte[vrednost][i][2];
+                jQuery('#opcije').attr('onchange', 'prikazi_cene("' + vrednost + '", this.value)');
+                jQuery('#opcije').append("<option value='" + karte[vrednost][i][2] + "'>" + karte[vrednost][i][2] + "</option>")
+            }
+        }
+    }
+    function prikazi_cene(kljuc, vrednost){
+        jQuery('#zona_i_cena').children().remove();
+        for(i = 0; i<karte[kljuc].length; i++) {
+            if(karte[kljuc][i][2] == vrednost) {
+                jQuery('#zona_i_cena').append('<span>Зона: ' + karte[kljuc][i][3] + '<br/>Цена са ПДВ-ом: ' + karte[kljuc][i][4] + ' РСД</span><br/><br/>');
+            }
+        }
+    }
+</script>
