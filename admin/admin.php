@@ -16,10 +16,6 @@ $isAdmin = true;
         <link href="css/style.css" rel="stylesheet" type="text/css" />
 
         <script type="text/javascript" src="js/skripte.js"></script>
-        <script src="js/multifile_compressed.js"></script>
-
-        <script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
-        <script type="text/javascript" src="js/jquery.tablesorter.js"></script>
     </head>
 
     <?php
@@ -47,12 +43,12 @@ $isAdmin = true;
                                 $_GET['s'] = "stranice";
                             }
 
-                            if (in_array($_GET['s'], array('stranice', 'dodaj_stranicu', 'logout'))) {
+                            if (in_array($_GET['s'], array('stranice', 'dodaj_stranicu', 'logout', 'obrisi_stranicu'))) {
                                 $fp = is_file($_GET['s'] . ".php");
                                 $fp = preg_replace('|\W|', '', $fp);
 
                                 if ($fp) {
-                                    if (!$isAdmin && (!in_array($_GET['s'], array('stranice', 'dodaj_stranicu', 'logout'))))
+                                    if (!$isAdmin && (!in_array($_GET['s'], array('stranice', 'dodaj_stranicu', 'logout', 'obrisi_stranicu'))))
                                         include("greska.php");
                                     else
                                         include($_GET['s'] . ".php");

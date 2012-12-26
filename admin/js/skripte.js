@@ -1,20 +1,31 @@
-function brisanje(){
-  var pitanje = confirm ("Da li zelite da obrisete ovaj podatak iz baze?")
-  if (pitanje==false){
- 	 return false;
+function proveri(){
+  if (document.forma.username.value == ""){
+     window.alert (" Morate uneti korisniko ime !! ")
+     document.forma.username.focus()
+     return false;
   }
-  return true;
-  
-}
+  if (document.forma.password.value == ""){
+     window.alert (" Morate uneti lozinku !! ")
+     document.forma.password.focus()
+     return false;
+  }  
+  var prot = document.forma.username.value
+  prot = prot.toUpperCase()
+  var pat = /\bOR\b/
+  var pat2 = /=/
+    
+  if (prot.search(pat) != -1 || prot.search(pat2) != -1) {
+     window.alert (" Pogresan format korisnickog imena ili lozinke! ")
+    // self.close()
+     return false;
+  }
+prot=document.forma.password.value
+prot = prot.toUpperCase()
+  if (prot.search(pat) != -1 || prot.search(pat2) != -1) {
+     window.alert (" Pogresan format korisnickog imena ili lozinke! ")
+    // self.close()
+     return false;
+  }
 
-function provera(){
-	var podatak=document.getElementById("sprat").value;   	
-	if(isNaN(podatak)){
-		podatak = "";
-		alert("Sprat mora biti broj!!!");
-		//podatak.focus();
-		return false;	
-	}else{
-		return true;
-	} 	 
+  document.forma.submit();
 }
