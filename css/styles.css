@@ -328,6 +328,22 @@ p{
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
 }
+.cene {
+    width: 350px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    display: block;
+    margin-bottom: 20px;
+    font-family: 'Scada', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+#zona_i_cena {
+    width: 350px;
+    margin: 0 auto;
+    color: #0066cc;
+    text-align: center;
+}
 /* ---------- Footer ----------  */
 #footer { 
  width: 900px;
