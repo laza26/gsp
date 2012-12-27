@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 function konekcija() {
     //mysql podaci
@@ -19,4 +19,15 @@ function testDB() {
     if (mysql_errno()) {
         die("MySQL greska: " . mysql_errno() . " " . mysql_error());
     }
+}
+
+function dohvati_stranicu($ID) {
+    $sql = "SELECT * FROM `stranice` WHERE `ID` =" . $ID;
+    $result = mysql_query($sql);
+
+    if (!$result) return null;
+    
+    $row = mysql_fetch_row($result);
+    
+    return array(stripslashes($row[1]), stripslashes($row[2]));
 }

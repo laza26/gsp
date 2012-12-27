@@ -81,9 +81,9 @@ a:hover {
 }
 .forma dt{
     float: left;
-    width: 10%;
+    width: 100%;
     display: block;
-    text-align: right;
+    text-align: left;
 }
 .forma dd{
     float: left;
