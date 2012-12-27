@@ -97,15 +97,6 @@
   
   <!-- Begin Content -->
   <div id="content">
-<!--<br><center>
-<table id="veliki_meni" border=0 cellspacing="4">
-	<tr><td><a href="dnevne_linije.php" target="_blank"><img src="images/meni_naslovna/dnevne_linije.png" name="dnevne_linije" alt="Дневне линије" onMouseover="document.dnevne_linije.src=dnevne_linije_over.src;" onClick="document.dnevne_linije.src=dnevne_linije.src;" onMouseout="document.dnevne_linije.src=dnevne_linije_default.src;" style="border:0;"></a></td>
-		<td><a href="nocne_linije.php" target="_blank"><img src="images/meni_naslovna/nocne_linije.png" name="nocne_linije" alt="Ноћне линије" onMouseover="document.nocne_linije.src=nocne_linije_over.src;" onClick="document.nocne_linije.src=nocne_linije.src;" onMouseout="document.nocne_linije.src=nocne_linije_default.src;" style="border:0;"></a></td>
-		<td><a href="karte_i_markice.php" target="_blank"><img src="images/meni_naslovna/karte_i_markice.png" name="karte_i_markice" alt="Карте и маркице" onMouseover="document.karte_i_markice.src=karte_i_markice_over.src;" onClick="document.karte_i_markice.src=karte_i_markice.src;" onMouseout="document.karte_i_markice.src=karte_i_markice_default.src;" style="border:0;"></a></td>
-		<td><a href="promena_rezima.php" target="_blank"><img src="images/meni_naslovna/izmene_rezima.png" name="izmene_rezima" alt="Измене режима" onMouseover="document.izmene_rezima.src=izmene_rezima_over.src;" onClick="document.izmene_rezima.src=izmene_rezima.src;" onMouseout="document.izmene_rezima.src=izmene_rezima_default.src;" style="border:0;"></td>
-	</tr>
-</table><br><br><br><br><br>-->
-
 
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
