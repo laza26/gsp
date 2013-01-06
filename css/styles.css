@@ -110,7 +110,7 @@ p{
  overflow: auto;
 }
 #content_home{
-    width: 65%;
+    width: 65%;     /* oko 600px */
     float: left;    
 }
 #sidebar_home{
@@ -343,6 +343,22 @@ p{
     margin: 0 auto;
     color: #0066cc;
     text-align: center;
+}
+.sredina{
+    width: 400px;    
+    margin: 20px auto;
+    list-style: none;  
+}
+.baneri{
+    width: 275px;
+    margin: 0 auto;
+    list-style: none;
+    padding-top: 20px;
+}
+.uitp{
+    width: 75px;
+    height: 58px;
+    padding-top: 20px;
 }
 /* ---------- Footer ----------  */
 #footer { 
