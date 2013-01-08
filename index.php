@@ -47,10 +47,7 @@
                         <a href="index.php"><img src="images/header/slider_trola.jpg" alt="" /></a>
                         <a href="index.php"><img src="images/header/slider_tramvaj.jpg" alt="" /></a>
                     </div>
-                </div>
-                <div id="htmlcaption" class="nivo-html-caption">
-                    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
-                </div>
+                </div>                
 
                 <script type="text/javascript">
                     $(window).load(function() {
@@ -65,7 +62,7 @@
             <!-- Begin Naviagtion -->
             <div id="navigation">
                 <div id="meni">
-                    <ul id="nav" class="dropdown dropdown-horizontal">
+                    <ul class="dropdown dropdown-horizontal">
                         <li><a href="index.php">Почетна</a></li>
                         <li><a href="?strana=istorija_pocetak">О ГСП-у</a></li>
                         <li class="dir">Линије
@@ -89,7 +86,7 @@
                             </ul>
                         </li>
                         <li><a href="?strana=marketing">Маркетинг</a></li>
-                        <li><a href="?strana=kontakt">Контакт</a></li>>
+                        <li><a href="?strana=kontakt">Контакт</a></li>
                     </ul>
                 </div>
             </div>
