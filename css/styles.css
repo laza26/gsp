@@ -62,7 +62,7 @@ p{
  background:#ffffff;
  margin: 0px 0px 0px 0px;
  padding: 1%;
- height: 560px;
+ height: 550px;
  overflow: auto;
 }
 #content_home{
@@ -141,18 +141,20 @@ p{
         
 .tramvaji, .trolejbusi, .autobusi, .autobusiN{
     margin: 0 auto;
-    width: 52%;
+    width: 490px; /* bilo 52% */
     line-height: 22px;
     font-weight: 700;
     padding-bottom: 30px;
 }
 .tramvaji dt{
-    width: 16.7%;
+    width: 80px; /* ili 16.7% */
     float: left;
     background: #ff0000;
     display: block;
     text-align: center;
-    color: #fff;    
+    color: #fff;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
 }
 .tramvaji dt a, .trolejbusi dt a, .autobusiN dt a{
     color: #fff !important;
@@ -175,7 +177,9 @@ p{
     background: #ff7f00;
     display: block;
     text-align: center;
-    color: #fff;    
+    color: #fff; 
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
 }
 .trolejbusi dt.zaglavlje2, .zaglavlje2 {
     background: #ff7f00;
@@ -186,7 +190,9 @@ p{
     background: #f7e314;
     display: block;
     text-align: center;
-    color: #003366;    
+    color: #003366; 
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
 }
 .autobusi dt a{
     color: #003366 !important;
@@ -207,13 +213,15 @@ p{
     display: block;
     text-align: center;
     color: #fff;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
 }
 .autobusiN dt.zaglavlje4, .zaglavlje4 {
     background: #003366;
 }
 .galerija{
     margin: 0 auto;
-    width: 82%; /* 4 x 161px + 4 x 20px za razmak između */
+    width: 724px; /* 4 x 161px + 4 x 20px za razmak između ili 82% */
     list-style: none;
 }
 .galerija li{
@@ -345,10 +353,13 @@ p{
     color: #0066cc;
     text-align: center;
 }
-.sredina{
+#sredina{
     width: 400px;    
     margin: 20px auto;
-    list-style: none;  
+    /*list-style: none;*/  
+}
+#sredina img{
+    width: 400px;
 }
 .baneri{
     width: 275px;
@@ -356,8 +367,8 @@ p{
     list-style: none;
     padding-top: 20px;
 }
-.uitp{
-    padding-top: 20px;
+.baneri li{
+    width: 100%;
 }
 
 /* ---------- Footer ----------  */
@@ -410,7 +421,7 @@ p{
     }
     #content{
         width: 98%;
-    }
+    }    
     .crop{
         width: 150px;
         height: auto;
@@ -418,4 +429,30 @@ p{
     #footer{
         width: 97.55%;
     }
+}
+
+@media screen and (max-width:880px){
+    #content_pr{
+        width: 25%;        
+    }
+}
+
+@media screen and (max-width:770px){
+    .galerija{
+        width: 563px;
+    }
+    #sidebar_home img{
+        width: 170px;
+        height: auto;
+    }
+}
+@media screen and (max-width:650px){
+    #sredina{
+        width: 200px;
+    }   
+    #sredina img{
+        width: 200px;
+        height: auto;
+        /*margin: 0 auto;*/
+    }    
 }
