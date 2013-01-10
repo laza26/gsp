@@ -67,3 +67,12 @@ ul.dropdown ul ul {
 ul.dropdown li:hover > ul {
  visibility: visible;
 }
+
+/* ------ Media Queries ------ */
+@media screen and (max-width:600px){
+    ul.dropdown {
+        width: 75%;
+        margin: 0 auto;
+        text-align: left;
+    }
+}

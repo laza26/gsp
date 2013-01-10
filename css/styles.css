@@ -172,7 +172,7 @@ p{
     color: #000 !important;
 }
 .trolejbusi dt{
-    width: 16.7%;
+    width: 80px;
     float: left;
     background: #ff7f00;
     display: block;
@@ -185,7 +185,7 @@ p{
     background: #ff7f00;
 }
 .autobusi dt{
-    width: 16.7%;
+    width: 80px;
     float: left;
     background: #f7e314;
     display: block;
@@ -454,5 +454,42 @@ p{
         width: 200px;
         height: auto;
         /*margin: 0 auto;*/
+    }
+    #meni{
+        font-size: 12px;
+        padding: 1px;
+    }
+    #leftcolumn{
+        width: 36%;
+    }
+    #rightcolumn{
+        float: left;
+        width: 50%;
+        padding: 10px 20px;
+    }
+    .kontacForma{
+        width: 150px;
+    }
+    .kontac textarea {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:600px){
+    #navigation{
+        height: 60px;
     }    
+}
+
+@media screen and (max-width:560px){
+    .tramvaji, .trolejbusi, .autobusi, .autobusiN{
+        width: 400px;
+    }
+    .galerija{
+        width: 550px;
+    }
+    .galerija li, .galerija img{
+        width: 120px;
+        height: auto;    
+    }
 }
