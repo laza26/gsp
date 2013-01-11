@@ -493,3 +493,44 @@ p{
         height: auto;    
     }
 }
+
+@media screen and (max-width:500px){
+    #leftcolumn{
+        width: 30%;
+    }
+    #rightcolumn{
+        float: right;        
+    }
+    .kontac{
+        width: 270px;
+    }
+    .kontac dt{
+        width: 70px;
+    }
+}
+
+@media screen and (max-width:460px){
+    #content_home{
+        width: 55%;
+    }
+    #content a, #content a:visited{
+        font-size: 12px;
+    }
+    .tramvaji, .trolejbusi, .autobusi, .autobusiN{
+        font-size: 12px;
+        width: 350px;
+    }
+    .tramvaji dt, .trolejbusi dt, .autobusi dt {
+        width: 70px;
+    }
+    .cene{
+        width: 300px;
+    }
+    .proza{
+        font-size: 14px;
+    }
+    #rightcolumn_pr{
+        float: left;
+        width: 55%;
+    }
+}

@@ -76,3 +76,9 @@ ul.dropdown li:hover > ul {
         text-align: left;
     }
 }
+
+@media screen and (max-width:460px){
+    ul.dropdown{
+        width: 100%;
+    }
+}
