@@ -51,7 +51,7 @@ html, body, #kontejner {
         <td align="center">
             <table class="login">
                <tr>
-                 <td width="100" rowspan="2" valign="top"></td>
+                 <td width="100" rowspan="2" valign="top"><img src="images/logo_small.png" /></td>
                  <td width="300" align="center" height="90">Dobrodošli u administraciju GSP-a.</td>
               </tr>
                <tr>
