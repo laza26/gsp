@@ -1,4 +1,4 @@
-<div id="uzi">
+<div id="uzi2">
 <?php
 $con = mysql_connect("localhost","root","");
 

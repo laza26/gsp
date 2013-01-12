@@ -270,7 +270,7 @@ p{
     color:#000;
     background-color:#ccc;
 }
-#uzi{
+#uzi, #uzi2{
     width:67.217391%;
     margin:0 auto;
 }
@@ -278,7 +278,7 @@ p{
     padding-bottom: 20px;    
 }
 .nocneTab{
-    width: 67.217391%;
+    width: 100%;
     margin: 0 auto;
     float: left;
     list-style: none;    
@@ -287,7 +287,7 @@ p{
     display: block;
 }
 .nocneTab li{
-    width: 33%;
+    width: 32%;
     float: left;
     display: block;
     border: 1px solid #003366;
@@ -435,6 +435,9 @@ p{
     #content_pr{
         width: 25%;        
     }
+    .stajalista td{
+        text-align: left;
+    }
 }
 
 @media screen and (max-width:770px){
@@ -532,5 +535,59 @@ p{
     #rightcolumn_pr{
         float: left;
         width: 55%;
+    }
+}
+
+@media screen and (max-width:460px){
+    .galerija{
+        width: 400px;
+    }
+    .galerija li, .galerija img{
+        width: 90px;
+        height: auto;    
+    }
+    #uzi{
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width:400px){
+    #uzi2{
+        width: 100%;
+    }
+    .nocneTab li.zaglavlje5, zaglavlje5{
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .nocneTab li{
+        font-size: 11px;
+    }
+    .polasci td, .polasci th{
+	font-size: 12px;
+	padding: 2px;
+    }
+}
+
+@media screen and (max-width:350px){
+    .cene{
+        width: 250px;
+    }
+    #sredina img{
+        width: 160px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    #rightcolumn{
+        width: 45%;
+    }
+    p{
+        text-align: left;
+    }
+}
+
+@media screen and (max-width:330px){
+    #meni{
+        font-size: 11px;
     }
 }
