@@ -1,3 +1,13 @@
+<script language="Javascript">
+    function provera (){
+        if (document.getElementById('ime').value.length<5) {alert("Ime mora imati najmanje 5 karaktera!"); return false;}
+        else if (document.getElementById("mail").value.length<1) {alert("Morate uneti Vaš e-mail!");return false;}
+        else if (document.getElementById("poruka").value.length<10) {alert("Dužina poruke mora biti veća od 10 karaktera.");return false;}
+        else {alert("Poruka uspešno poslata!");}	
+        return true;
+    }
+</script>
+
 <div id="leftcolumn">
 <?php
     konekcija();
@@ -35,7 +45,7 @@ mysql_close($con);
 ?>
 
 <!-- Kontakt tabela -->
-	<form id="forma" action="kontakt.php?p=10" method="post" onSubmit="return provera()">
+	<form id="forma" action="" method="post" onSubmit="return provera()">
             <dl class="kontac">
 		<dt>Ваше име:</dt>
 		<dd><input type="text" id="ime" class="kontacForma" name="ime"></dd>   
@@ -48,20 +58,20 @@ mysql_close($con);
             </dl>
 	</form>
 <!-- Kraj kontakt tabele -->
-
+</div> 
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
-if($_REQUEST['p']=='10'){
-	$ime=$_POST['ime'];
-	$adresa=$_POST['mail'];
+if(!empty($_POST['mail'])){
+        $ime=$_POST['ime'];
+	$mail=$_POST['mail'];
 	$poruka=$_POST['poruka'];
 	
 	$adresa_primaoca='laza26@gmail.com';
-	$subject='GSP Poruka sa sajta';
-	$sadrzaj='Posiljalac: '.$ime. "\n". 'E mail posiljaoca: '.$adresa. "\n". 'Poruka: '.$poruka."/n";
+	$subject='Poruka sa GSP sajta';
+	$sadrzaj='Posiljalac: '.$ime. "\n". 'E mail posiljaoca: '.$mail. "\n". 'Poruka: '.$poruka."/n";
 	$dolaznisajt='From:gspbeograd.commuv.com';
 	
-	mail($adresaprimaoca, $subject, $sadrzaj, $dolaznisajt);
-}
+	mail($adresa_primaoca, $subject, $sadrzaj, $dolaznisajt);
+}        
 ?>
-</div>    
+   
