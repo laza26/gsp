@@ -22,7 +22,7 @@
 
 <div id="rightcolumn">
 <?php
-$con = mysql_connect("localhost","root","");
+$con = mysql_connect("mysql1.000webhost.com","a3499847_admin","admin12345");
 
 if (!$con)
    {
@@ -31,8 +31,8 @@ if (!$con)
    }
 
 mysql_query("SET NAMES 'UTF8'");
-mysql_select_db("gsp", $con);
-$poziv11="SELECT * FROM Pisite_nam WHERE ID=1";
+mysql_select_db("a3499847_gsp", $con);
+$poziv11="SELECT * FROM pisite_nam WHERE ID=1";
 $rezultat11=mysql_query($poziv11);
 
 while($ispis11=mysql_fetch_array($rezultat11))

@@ -10,19 +10,19 @@ if (!$con)
 mysql_query("SET NAMES 'UTF8'");
 mysql_select_db("a3499847_gsp", $con);
 
-$poziv1="SELECT Broj_linije, Trasa FROM Nocne_linije WHERE ID=1";
+$poziv1="SELECT Broj_linije, Trasa FROM nocne_linije WHERE ID=1";
 $rezultat1=mysql_query($poziv1);
 $ispis1=mysql_fetch_array($rezultat1);
-$poziv2="SELECT Broj_linije, Trasa FROM Nocne_linije WHERE ID=2";
+$poziv2="SELECT Broj_linije, Trasa FROM nocne_linije WHERE ID=2";
 $rezultat2=mysql_query($poziv2);
 $ispis2=mysql_fetch_array($rezultat2);
-$poziv3="SELECT Broj_linije, Trasa FROM Nocne_linije WHERE ID=3";
+$poziv3="SELECT Broj_linije, Trasa FROM nocne_linije WHERE ID=3";
 $rezultat3=mysql_query($poziv3);
 $ispis3=mysql_fetch_array($rezultat3);
-$poziv4="SELECT Broj_linije, Trasa FROM Nocne_linije WHERE ID=4";
+$poziv4="SELECT Broj_linije, Trasa FROM nocne_linije WHERE ID=4";
 $rezultat4=mysql_query($poziv4);
 $ispis4=mysql_fetch_array($rezultat4);
-$poziv5="SELECT Broj_linije, Trasa FROM Nocne_linije WHERE ID=6";
+$poziv5="SELECT Broj_linije, Trasa FROM nocne_linije WHERE ID=6";
 $rezultat5=mysql_query($poziv5);
 $ispis5=mysql_fetch_array($rezultat5);
 

@@ -9,29 +9,29 @@ if (!$con)
 
 mysql_query("SET NAMES 'UTF8'");
 mysql_select_db("a3499847_gsp", $con);
-$poziv1="SELECT * FROM Tramvajske_linije WHERE ID=8";
+$poziv1="SELECT * FROM tramvajske_linije WHERE ID=8";
 $rezultat1=mysql_query($poziv1);
 $redovi1=mysql_numrows($rezultat1);
-$poziv2="SELECT * FROM Tramvajske_linije WHERE ID=9";
+$poziv2="SELECT * FROM tramvajske_linije WHERE ID=9";
 $rezultat2=mysql_query($poziv2);
 $redovi2=mysql_numrows($rezultat2);
 
-$poziv3="SELECT * FROM Polasci_tramvaji WHERE ID=19";
+$poziv3="SELECT * FROM polasci_tramvaji WHERE ID=19";
 $rezultat3=mysql_query($poziv3);
 $ispis3=mysql_fetch_array($rezultat3);
-$poziv4="SELECT * FROM Polasci_tramvaji WHERE ID=21";
+$poziv4="SELECT * FROM polasci_tramvaji WHERE ID=21";
 $rezultat4=mysql_query($poziv4);
 $ispis4=mysql_fetch_array($rezultat4);
-$poziv5="SELECT * FROM Polasci_tramvaji WHERE ID=23";
+$poziv5="SELECT * FROM polasci_tramvaji WHERE ID=23";
 $rezultat5=mysql_query($poziv5);
 $ispis5=mysql_fetch_array($rezultat5);
-$poziv6="SELECT * FROM Polasci_tramvaji WHERE ID=20";
+$poziv6="SELECT * FROM polasci_tramvaji WHERE ID=20";
 $rezultat6=mysql_query($poziv6);
 $ispis6=mysql_fetch_array($rezultat6);
-$poziv7="SELECT * FROM Polasci_tramvaji WHERE ID=22";
+$poziv7="SELECT * FROM polasci_tramvaji WHERE ID=22";
 $rezultat7=mysql_query($poziv7);
 $ispis7=mysql_fetch_array($rezultat7);
-$poziv8="SELECT * FROM Polasci_tramvaji WHERE ID=24";
+$poziv8="SELECT * FROM polasci_tramvaji WHERE ID=24";
 $rezultat8=mysql_query($poziv8);
 $ispis8=mysql_fetch_array($rezultat8);
 

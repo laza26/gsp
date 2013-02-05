@@ -9,16 +9,16 @@ if (!$con)
 
 mysql_query("SET NAMES 'UTF8'");
 mysql_select_db("a3499847_gsp", $con);
-$poziv11="SELECT Naziv, Sadrzaj FROM Promena_rezima WHERE ID=1";
+$poziv11="SELECT Naziv, Sadrzaj FROM promena_rezima WHERE ID=1";
 $rezultat11=mysql_query($poziv11);
 $ispis11=mysql_fetch_array($rezultat11);
-$poziv12="SELECT Naziv, Sadrzaj FROM Promena_rezima WHERE ID=2";
+$poziv12="SELECT Naziv, Sadrzaj FROM promena_rezima WHERE ID=2";
 $rezultat12=mysql_query($poziv12);
 $ispis12=mysql_fetch_array($rezultat12);
-$poziv13="SELECT Naziv, Sadrzaj FROM Promena_rezima WHERE ID=3";
+$poziv13="SELECT Naziv, Sadrzaj FROM promena_rezima WHERE ID=3";
 $rezultat13=mysql_query($poziv13);
 $ispis13=mysql_fetch_array($rezultat13);
-$poziv14="SELECT Naziv, Sadrzaj FROM Promena_rezima WHERE ID=4";
+$poziv14="SELECT Naziv, Sadrzaj FROM promena_rezima WHERE ID=4";
 $rezultat14=mysql_query($poziv14);
 $ispis14=mysql_fetch_array($rezultat14);
 

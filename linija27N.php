@@ -11,14 +11,14 @@ if (!$con)
 mysql_query("SET NAMES 'UTF8'");
 mysql_select_db("a3499847_gsp", $con);
 
-$linija="SELECT * FROM Nocne_linije WHERE ID=4";
+$linija="SELECT * FROM nocne_linije WHERE ID=4";
 $linija_rezultat=mysql_query($linija);
 $linija_ispis=mysql_fetch_array($linija_rezultat);
 
-$polasci1="SELECT * FROM Vremena_nocne WHERE ID=7";
+$polasci1="SELECT * FROM vremena_nocne WHERE ID=7";
 $polasci1_rezultat=mysql_query($polasci1);
 $polasci1_ispis=mysql_fetch_array($polasci1_rezultat);
-$polasci2="SELECT * FROM Vremena_nocne WHERE ID=8";
+$polasci2="SELECT * FROM vremena_nocne WHERE ID=8";
 $polasci2_rezultat=mysql_query($polasci2);
 $polasci2_ispis=mysql_fetch_array($polasci2_rezultat);
 
