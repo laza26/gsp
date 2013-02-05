@@ -1,5 +1,5 @@
 <?php
-$con = mysql_connect("localhost","root","");
+$con = mysql_connect("mysql1.000webhost.com","a3499847_admin","admin12345");
 
 if (!$con)
    {
@@ -8,7 +8,7 @@ if (!$con)
    }
 
 mysql_query("SET NAMES 'UTF8'");
-mysql_select_db("gsp", $con);
+mysql_select_db("a3499847_gsp", $con);
 $poziv1="SELECT * FROM Tramvajske_linije WHERE ID=1";
 $rezultat1=mysql_query($poziv1);
 $redovi1=mysql_numrows($rezultat1);

@@ -66,10 +66,10 @@ if(!empty($_POST['mail'])){
 	$mail=$_POST['mail'];
 	$poruka=$_POST['poruka'];
 	
-	$adresa_primaoca='laza26@gmail.com';
+	$adresa_primaoca='uprava@gsp.net63.net';
 	$subject='Poruka sa GSP sajta';
 	$sadrzaj='Posiljalac: '.$ime. "\n". 'E mail posiljaoca: '.$mail. "\n". 'Poruka: '.$poruka."/n";
-	$dolaznisajt='From:gspbeograd.commuv.com';
+	$dolaznisajt='From:gsp.net63.net';
 	
 	mail($adresa_primaoca, $subject, $sadrzaj, $dolaznisajt);
 }        

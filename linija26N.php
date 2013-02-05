@@ -1,6 +1,6 @@
 <div id="uzi2">
 <?php
-$con = mysql_connect("localhost","root","");
+$con = mysql_connect("mysql1.000webhost.com","a3499847_admin","admin12345");
 
 if (!$con)
    {
@@ -9,7 +9,7 @@ if (!$con)
    }
 
 mysql_query("SET NAMES 'UTF8'");
-mysql_select_db("gsp", $con);
+mysql_select_db("a3499847_gsp", $con);
 
 $linija="SELECT * FROM Nocne_linije WHERE ID=3";
 $linija_rezultat=mysql_query($linija);
