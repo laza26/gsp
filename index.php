@@ -98,6 +98,7 @@
                 <?php
                 error_reporting(E_ALL ^ E_NOTICE);
                 include 'inc/baza.php';
+		konekcija();
                 if ($_REQUEST ['strana']) {
                     include ($_REQUEST['strana'] . '.php');
                 } elseif ($_REQUEST['naslov'])

@@ -2,10 +2,10 @@
 
 function konekcija() {
     //mysql podaci
-    $dbhostname = 'mysql1.000webhost.com';
-    $dbname = 'a3499847_gsp';
-    $dbusername = 'a3499847_admin';
-    $dbpassword = 'admin12345';
+    $dbhostname = 'localhost';
+    $dbname = 'gsp';
+    $dbusername = 'root';
+    $dbpassword = 'root';
     $connect = mysql_connect($dbhostname, $dbusername, $dbpassword);
     mysql_select_db($dbname) or die("Ne mogu se konektovati na bazu zbog: " . mysql_error());
     mysql_query("SET NAMES utf8");

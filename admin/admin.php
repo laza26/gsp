@@ -34,7 +34,9 @@ $isAdmin = true;
                             <tr>
                                 <td>
                                     <a href="?s=stranice">Lista stranica</a><br/>
-                                    <a href="?s=dodaj_stranicu">Dodaj stranicu</a>
+                                    <a href="?s=dodaj_stranicu">Dodaj stranicu</a><br/>
+				    <a href="?s=rezimi">Promena rezima</a><br/>
+                                    <a href="?s=dodaj_rezim">Dodavanje novog rezima</a>
                                 </td>
                             </tr>
                         </table></td>
@@ -43,12 +45,12 @@ $isAdmin = true;
                                 $_GET['s'] = "stranice";
                             }
 
-                            if (in_array($_GET['s'], array('stranice', 'dodaj_stranicu', 'logout', 'obrisi_stranicu'))) {
+                            if (in_array($_GET['s'], array('stranice', 'dodaj_stranicu', 'logout', 'obrisi_stranicu', 'rezimi', 'dodaj_rezim', 'obrisi_rezim'))) {
                                 $fp = is_file($_GET['s'] . ".php");
                                 $fp = preg_replace('|\W|', '', $fp);
 
                                 if ($fp) {
-                                    if (!$isAdmin && (!in_array($_GET['s'], array('stranice', 'dodaj_stranicu', 'logout', 'obrisi_stranicu'))))
+                                    if (!$isAdmin && (!in_array($_GET['s'], array('stranice', 'dodaj_stranicu', 'logout', 'obrisi_stranicu', 'rezimi', 'dodaj_rezim', 'obrisi_rezim'))))
                                         include("greska.php");
                                     else
                                         include($_GET['s'] . ".php");

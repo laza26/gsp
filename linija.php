@@ -1,58 +1,41 @@
 <?php
 
-$poziv1="SELECT * FROM autobuske_linije WHERE ID=1";
-$rezultat1=mysql_query($poziv1);
-$redovi1=mysql_numrows($rezultat1);
-$poziv2="SELECT * FROM autobuske_linije WHERE ID=2";
-$rezultat2=mysql_query($poziv2);
-$redovi2=mysql_numrows($rezultat2);
+$poziv = "SELECT * FROM " . $_REQUEST['tip'] . "_linije WHERE Broj_linije=" . $_REQUEST['broj'] . ' ORDER BY Smer';
+$rezultat = mysql_query($poziv);
 
-$poziv3="SELECT * FROM polasci_autobusi WHERE ID=1";
+while($ispis = mysql_fetch_array($rezultat)) {
+	$ispisati_liniju[] = $ispis;
+}
+
+$redovi = mysql_numrows($rezultat);
+
+
+$poziv3="SELECT * FROM polasci_tramvaji WHERE ID=7";
 $rezultat3=mysql_query($poziv3);
 $ispis3=mysql_fetch_array($rezultat3);
-$poziv4="SELECT * FROM polasci_autobusi WHERE ID=3";
+$poziv4="SELECT * FROM polasci_tramvaji WHERE ID=9";
 $rezultat4=mysql_query($poziv4);
 $ispis4=mysql_fetch_array($rezultat4);
-$poziv5="SELECT * FROM polasci_autobusi WHERE ID=5";
+$poziv5="SELECT * FROM polasci_tramvaji WHERE ID=11";
 $rezultat5=mysql_query($poziv5);
 $ispis5=mysql_fetch_array($rezultat5);
-$poziv6="SELECT * FROM polasci_autobusi WHERE ID=2";
+$poziv6="SELECT * FROM polasci_tramvaji WHERE ID=8";
 $rezultat6=mysql_query($poziv6);
 $ispis6=mysql_fetch_array($rezultat6);
-$poziv7="SELECT * FROM polasci_autobusi WHERE ID=4";
+$poziv7="SELECT * FROM polasci_tramvaji WHERE ID=10";
 $rezultat7=mysql_query($poziv7);
 $ispis7=mysql_fetch_array($rezultat7);
-$poziv8="SELECT * FROM polasci_autobusi WHERE ID=6";
+$poziv8="SELECT * FROM polasci_tramvaji WHERE ID=12";
 $rezultat8=mysql_query($poziv8);
 $ispis8=mysql_fetch_array($rezultat8);
 
 
-if(!$rezultat1){
-   die('GRESKA U UPITU: ' . mysql_error());
-}
-	else if(!$rezultat2)
-	die('GRESKA U UPITU: ' . mysql_error());
-	else if(!$rezultat3)
-	die('GRESKA U UPITU: ' . mysql_error());
-	else if(!$rezultat4)
-	die('GRESKA U UPITU: ' . mysql_error());
-	else if(!$rezultat5)
-	die('GRESKA U UPITU: ' . mysql_error());
-	else if(!$rezultat6)
-	die('GRESKA U UPITU: ' . mysql_error());
-	else if(!$rezultat7)
-	die('GRESKA U UPITU: ' . mysql_error());
-	else if(!$rezultat8)
-	die('GRESKA U UPITU: ' . mysql_error());
 
-while($ispis1=mysql_fetch_array($rezultat1))
-{
-	echo "<h2>Линија ".$ispis1['Broj_linije']."</h2>";
-	echo "<h3>".$ispis1['Trasa']."</h3>";
-}	
-mysql_close($con);	
+echo "<h2>Линија " . $_REQUEST['broj'] . "</h2>";
+echo "<h3>" . $ispisati_liniju['Trasa'] . "</h3>";
+
+
 ?>
-	
 <table class="stajalista">
 	<tr>
 		<th>Смер</th>
@@ -61,39 +44,16 @@ mysql_close($con);
 	</tr>
 	
 <?php //parametri prvog poziva
-$i1=0;
-while ($i1 < $redovi1){
-	$f1=mysql_result($rezultat1, $i1, "Smer");
-	$f2=mysql_result($rezultat1, $i1, "Ulice");
-	$f3=mysql_result($rezultat1, $i1, "Stajalista");
-?>
 
+foreach($ispisati_liniju as $linija) {
+?>
 <tr>
-	<td><?php echo $f1; ?></td>
-	<td><?php echo $f2; ?></td>
-	<td class="smalltext"><?php echo $f3; ?></td>
+	<td><?php echo $linija['Smer']; ?></td>
+	<td><?php echo $linija['Ulice']; ?></td>
+	<td class="smalltext"><?php echo $linija['Stajalista']; ?></td>
 </tr>
-<?php
-$i1++;
-}	//kraj prve while petlje
-?>
-
-<?php //parametri drugog poziva
-$i2=0;
-while ($i2 < $redovi2){
-	$f4=mysql_result($rezultat2, $i2, "Smer");
-	$f5=mysql_result($rezultat2, $i2, "Ulice");
-	$f6=mysql_result($rezultat2, $i2, "Stajalista");
-?>
-
-<tr>
-	<td><?php echo $f4; ?></td>
-	<td><?php echo $f5; ?></td>
-	<td class="smalltext"><?php echo $f6; ?></td>
-</tr>
-<?php
-$i2++;
-}	//kraj druge while petlje
+<?php 
+}
 ?>
 </table>
 <!-- Kraj tabele stajališta -->
