@@ -1,6 +1,20 @@
 <?php
 
-$poziv = "SELECT * FROM " . $_REQUEST['tip'] . "_linije WHERE Broj_linije=" . $_REQUEST['broj'] . ' ORDER BY Smer';
+switch($_REQUEST['tip']) {
+	case "autobuske":
+		$tip = "autobuske";
+		$tip_mnozina = "autobusi";
+		break;
+	case "tramvajske":
+		$tip = "tramvajske";
+		$tip_mnozina = "tramvaji";
+		break;
+	default:
+		$tip = "trolejbuske";
+		$tip_mnozina = "trolejbusi";
+}
+
+$poziv = "SELECT * FROM " . $tip . "_linije WHERE Broj_linije=" . $_REQUEST['broj'] . ' ORDER BY Smer';
 $rezultat = mysql_query($poziv);
 
 while($ispis = mysql_fetch_array($rezultat)) {
@@ -10,30 +24,16 @@ while($ispis = mysql_fetch_array($rezultat)) {
 $redovi = mysql_numrows($rezultat);
 
 
-$poziv3="SELECT * FROM polasci_tramvaji WHERE ID=7";
-$rezultat3=mysql_query($poziv3);
-$ispis3=mysql_fetch_array($rezultat3);
-$poziv4="SELECT * FROM polasci_tramvaji WHERE ID=9";
-$rezultat4=mysql_query($poziv4);
-$ispis4=mysql_fetch_array($rezultat4);
-$poziv5="SELECT * FROM polasci_tramvaji WHERE ID=11";
-$rezultat5=mysql_query($poziv5);
-$ispis5=mysql_fetch_array($rezultat5);
-$poziv6="SELECT * FROM polasci_tramvaji WHERE ID=8";
-$rezultat6=mysql_query($poziv6);
-$ispis6=mysql_fetch_array($rezultat6);
-$poziv7="SELECT * FROM polasci_tramvaji WHERE ID=10";
-$rezultat7=mysql_query($poziv7);
-$ispis7=mysql_fetch_array($rezultat7);
-$poziv8="SELECT * FROM polasci_tramvaji WHERE ID=12";
-$rezultat8=mysql_query($poziv8);
-$ispis8=mysql_fetch_array($rezultat8);
+$polasci_sql = "SELECT * FROM gsp.polasci_" . $tip_mnozina . " where Broj_linije=" . $_REQUEST['broj'] . " ORDER BY Terminus, Dan;";
+$polasci_rezultat = mysql_query($polasci_sql);
 
+while($ispis = mysql_fetch_assoc($polasci_rezultat)) {
+	$polasci_ispis[] = $ispis;
+}
 
 
 echo "<h2>Линија " . $_REQUEST['broj'] . "</h2>";
 echo "<h3>" . $ispisati_liniju['Trasa'] . "</h3>";
-
 
 ?>
 <table class="stajalista">
@@ -63,7 +63,7 @@ foreach($ispisati_liniju as $linija) {
 <!-- Tabela polazaka terminus 1-->
 <table class="polasci">
 	<tr>
-	<th colspan="9"><?php echo $ispis3['Terminus'];?> (Смер А)</th>
+	<th colspan="9">Почетна станица: <?php echo $polasci_ispis[0]['Terminus'];?></th>
 	</tr>
 	<tr class="alt">
 		<td colspan="3"></td>
@@ -71,31 +71,31 @@ foreach($ispisati_liniju as $linija) {
 		<td colspan="3"><b>Последња три:</b></td>
 	</tr>
 	<tr>
-		<td colspan="3"><b><?php echo $ispis3['Dan']; ?></b></td>
-		<td><?php echo $ispis3['Prvi_polazak'];?></td>
-		<td><?php echo $ispis3['Drugi_polazak'];?></td>
-		<td><?php echo $ispis3['Treci_polazak'];?></td>
-		<td><?php echo $ispis3['Treci_od_pozadi'];?></td>
-		<td><?php echo $ispis3['Pretposlednji'];?></td>
-		<td><?php echo $ispis3['Poslednji'];?></td>		
+		<td colspan="3"><b><?php echo $polasci_ispis[1]['Dan']; ?></b></td>
+		<td><?php echo $polasci_ispis[1]['Prvi_polazak'];?></td>
+		<td><?php echo $polasci_ispis[1]['Drugi_polazak'];?></td>
+		<td><?php echo $polasci_ispis[1]['Treci_polazak'];?></td>
+		<td><?php echo $polasci_ispis[1]['Treci_od_pozadi'];?></td>
+		<td><?php echo $polasci_ispis[1]['Pretposlednji'];?></td>
+		<td><?php echo $polasci_ispis[1]['Poslednji'];?></td>		
 	</tr>
 	<tr>
-		<td colspan="3"><b><?php echo $ispis4['Dan']; ?></b></td>
-		<td><?php echo $ispis4['Prvi_polazak'];?></td>
-		<td><?php echo $ispis4['Drugi_polazak'];?></td>
-		<td><?php echo $ispis4['Treci_polazak'];?></td>
-		<td><?php echo $ispis4['Treci_od_pozadi'];?></td>
-		<td><?php echo $ispis4['Pretposlednji'];?></td>
-		<td><?php echo $ispis4['Poslednji'];?></td>		
+		<td colspan="3"><b><?php echo $polasci_ispis[2]['Dan']; ?></b></td>
+		<td><?php echo $polasci_ispis[2]['Prvi_polazak'];?></td>
+		<td><?php echo $polasci_ispis[2]['Drugi_polazak'];?></td>
+		<td><?php echo $polasci_ispis[2]['Treci_polazak'];?></td>
+		<td><?php echo $polasci_ispis[2]['Treci_od_pozadi'];?></td>
+		<td><?php echo $polasci_ispis[2]['Pretposlednji'];?></td>
+		<td><?php echo $polasci_ispis[2]['Poslednji'];?></td>		
 	</tr>
 		<tr>
-		<td colspan="3"><b><?php echo $ispis5['Dan']; ?></b></td>
-		<td><?php echo $ispis5['Prvi_polazak'];?></td>
-		<td><?php echo $ispis5['Drugi_polazak'];?></td>
-		<td><?php echo $ispis5['Treci_polazak'];?></td>
-		<td><?php echo $ispis5['Treci_od_pozadi'];?></td>
-		<td><?php echo $ispis5['Pretposlednji'];?></td>
-		<td><?php echo $ispis5['Poslednji'];?></td>		
+		<td colspan="3"><b><?php echo $polasci_ispis[0]['Dan']; ?></b></td>
+		<td><?php echo $polasci_ispis[0]['Prvi_polazak'];?></td>
+		<td><?php echo $polasci_ispis[0]['Drugi_polazak'];?></td>
+		<td><?php echo $polasci_ispis[0]['Treci_polazak'];?></td>
+		<td><?php echo $polasci_ispis[0]['Treci_od_pozadi'];?></td>
+		<td><?php echo $polasci_ispis[0]['Pretposlednji'];?></td>
+		<td><?php echo $polasci_ispis[0]['Poslednji'];?></td>		
 	</tr>
 </table><br><br>
 <!-- Kraj prve tabele polazaka -->
@@ -103,7 +103,7 @@ foreach($ispisati_liniju as $linija) {
 <!-- Tabela polazaka terminus 2-->
 <table class="polasci">
     <tr>
-        <th colspan="9"><?php echo $ispis3['Terminus'];?> (Смер Б)</th>
+        <th colspan="9">Почетна станица: <?php echo $polasci_ispis[3]['Terminus'];?></th>
     </tr>
 	<tr class="alt">
 		<td colspan="3"></td>
@@ -111,31 +111,31 @@ foreach($ispisati_liniju as $linija) {
 		<td colspan="3"><b>Последња три:</b></td>
 	</tr>
 	<tr>
-		<td colspan="3"><b><?php echo $ispis6['Dan']; ?></b></td>
-		<td><?php echo $ispis6['Prvi_polazak'];?></td>
-		<td><?php echo $ispis6['Drugi_polazak'];?></td>
-		<td><?php echo $ispis6['Treci_polazak'];?></td>
-		<td><?php echo $ispis6['Treci_od_pozadi'];?></td>
-		<td><?php echo $ispis6['Pretposlednji'];?></td>
-		<td><?php echo $ispis6['Poslednji'];?></td>		
+		<td colspan="3"><b><?php echo $polasci_ispis[4]['Dan']; ?></b></td>
+		<td><?php echo $polasci_ispis[4]['Prvi_polazak'];?></td>
+		<td><?php echo $polasci_ispis[4]['Drugi_polazak'];?></td>
+		<td><?php echo $polasci_ispis[4]['Treci_polazak'];?></td>
+		<td><?php echo $polasci_ispis[4]['Treci_od_pozadi'];?></td>
+		<td><?php echo $polasci_ispis[4]['Pretposlednji'];?></td>
+		<td><?php echo $polasci_ispis[4]['Poslednji'];?></td>		
 	</tr>
 	<tr>
-		<td colspan="3"><b><?php echo $ispis7['Dan']; ?></b></td>
-		<td><?php echo $ispis7['Prvi_polazak'];?></td>
-		<td><?php echo $ispis7['Drugi_polazak'];?></td>
-		<td><?php echo $ispis7['Treci_polazak'];?></td>
-		<td><?php echo $ispis7['Treci_od_pozadi'];?></td>
-		<td><?php echo $ispis7['Pretposlednji'];?></td>
-		<td><?php echo $ispis7['Poslednji'];?></td>		
+		<td colspan="3"><b><?php echo $polasci_ispis[5]['Dan']; ?></b></td>
+		<td><?php echo $polasci_ispis[5]['Prvi_polazak'];?></td>
+		<td><?php echo $polasci_ispis[5]['Drugi_polazak'];?></td>
+		<td><?php echo $polasci_ispis[5]['Treci_polazak'];?></td>
+		<td><?php echo $polasci_ispis[5]['Treci_od_pozadi'];?></td>
+		<td><?php echo $polasci_ispis[5]['Pretposlednji'];?></td>
+		<td><?php echo $polasci_ispis[5]['Poslednji'];?></td>		
 	</tr>
 		<tr>
-		<td colspan="3"><b><?php echo $ispis8['Dan']; ?></b></td>
-		<td><?php echo $ispis8['Prvi_polazak'];?></td>
-		<td><?php echo $ispis8['Drugi_polazak'];?></td>
-		<td><?php echo $ispis8['Treci_polazak'];?></td>
-		<td><?php echo $ispis8['Treci_od_pozadi'];?></td>
-		<td><?php echo $ispis8['Pretposlednji'];?></td>
-		<td><?php echo $ispis8['Poslednji'];?></td>		
+		<td colspan="3"><b><?php echo $polasci_ispis[3]['Dan']; ?></b></td>
+		<td><?php echo $polasci_ispis[3]['Prvi_polazak'];?></td>
+		<td><?php echo $polasci_ispis[3]['Drugi_polazak'];?></td>
+		<td><?php echo $polasci_ispis[3]['Treci_polazak'];?></td>
+		<td><?php echo $polasci_ispis[3]['Treci_od_pozadi'];?></td>
+		<td><?php echo $polasci_ispis[3]['Pretposlednji'];?></td>
+		<td><?php echo $polasci_ispis[3]['Poslednji'];?></td>		
 	</tr>
 </table></br>
 <!-- Kraj druge tabele polazaka -->
