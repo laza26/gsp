@@ -57,7 +57,7 @@ error_reporting(0);
 		$ispisati_liniju[] = $ispis;
 	}
         
-	$polasci_sql = "SELECT * FROM gsp.polasci_" . $tip_mnozina . " where Broj_linije='" . $_REQUEST['broj'] . "' ORDER BY Terminus, Dan;";
+	$polasci_sql = "SELECT * FROM a3499847_gsp.polasci_" . $tip_mnozina . " where Broj_linije='" . $_REQUEST['broj'] . "' ORDER BY Terminus, Dan;";
 	$polasci_rezultat = mysql_query($polasci_sql);
 
 	while($ispis = mysql_fetch_assoc($polasci_rezultat)) {
