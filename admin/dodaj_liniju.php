@@ -1,4 +1,5 @@
 <?php 
+error_reporting(0);
     $id = $Naziv = $Sadrzaj = "";
     
 	switch($_REQUEST['tip']) {
@@ -49,14 +50,14 @@
         
         konekcija();
 	
-	$poziv = "SELECT * FROM " . $tip . "_linije WHERE Broj_linije=" . $_REQUEST['broj'] . ' ORDER BY Smer';
+	$poziv = "SELECT * FROM " . $tip . "_linije WHERE Broj_linije='" . $_REQUEST['broj'] . "' ORDER BY Smer";
 	$rezultat = mysql_query($poziv);
 
 	while($ispis = mysql_fetch_array($rezultat)) {
 		$ispisati_liniju[] = $ispis;
 	}
         
-	$polasci_sql = "SELECT * FROM gsp.polasci_" . $tip_mnozina . " where Broj_linije=" . $_REQUEST['broj'] . " ORDER BY Terminus, Dan;";
+	$polasci_sql = "SELECT * FROM gsp.polasci_" . $tip_mnozina . " where Broj_linije='" . $_REQUEST['broj'] . "' ORDER BY Terminus, Dan;";
 	$polasci_rezultat = mysql_query($polasci_sql);
 
 	while($ispis = mysql_fetch_assoc($polasci_rezultat)) {
@@ -64,6 +65,16 @@
 	}
     } else {
 	$ispisati_liniju[0] = $ispisati_liniju[1] = array('Smer' => '', 'Trasa' => '', 'Ulice' => '', 'Stajalista' => '');
+	for($i = 0; $i++; $i<7) {
+		$polasci_ispis[$i]['Terminus'] = '';
+		$polasci_ispis[$i]['Dan'] = '';
+		$polasci_ispis[$i]['Prvi_polazak'] = '';
+		$polasci_ispis[$i]['Drugi_polazak'] = '';
+		$polasci_ispis[$i]['Treci_polazak'] = '';
+		$polasci_ispis[$i]['Treci_od_pozadi'] = '';
+		$polasci_ispis[$i]['Pretposlednji'] = '';
+		$polasci_ispis[$i]['Poslednji'] = '';
+	}
     }
 ?>
 <h2>Stajalista</h2>

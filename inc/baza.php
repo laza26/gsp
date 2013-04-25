@@ -5,7 +5,7 @@ function konekcija() {
     $dbhostname = 'localhost';
     $dbname = 'gsp';
     $dbusername = 'root';
-    $dbpassword = 'root';
+    $dbpassword = '';
     $connect = mysql_connect($dbhostname, $dbusername, $dbpassword);
     mysql_select_db($dbname) or die("Ne mogu se konektovati na bazu zbog: " . mysql_error());
     mysql_query("SET NAMES utf8");

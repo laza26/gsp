@@ -23,7 +23,7 @@ if(!$rezultat11){
 	else if(!$rezultat14)
 	die('GRESKA U UPITU: ' . mysql_error());	
 	
-mysql_close($con);
+//mysql_close($con);
 ?>
 <h2>Измене у режиму саобраћаја линија ГСП</h2>
 <a href="?naslov=1"> <?php echo "<h4>".$ispis11['Naziv']."</h4>";?> </a> </br>

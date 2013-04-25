@@ -14,7 +14,7 @@ switch($_REQUEST['tip']) {
 		$tip_mnozina = "trolejbusi";
 }
 
-$poziv = "SELECT * FROM " . $tip . "_linije WHERE Broj_linije=" . $_REQUEST['broj'] . ' ORDER BY Smer';
+$poziv = "SELECT * FROM " . $tip . "_linije WHERE Broj_linije='" . $_REQUEST['broj'] . "' ORDER BY Smer";
 $rezultat = mysql_query($poziv);
 
 while($ispis = mysql_fetch_array($rezultat)) {
@@ -24,7 +24,7 @@ while($ispis = mysql_fetch_array($rezultat)) {
 $redovi = mysql_numrows($rezultat);
 
 
-$polasci_sql = "SELECT * FROM gsp.polasci_" . $tip_mnozina . " where Broj_linije=" . $_REQUEST['broj'] . " ORDER BY Terminus, Dan;";
+$polasci_sql = "SELECT * FROM gsp.polasci_" . $tip_mnozina . " where Broj_linije='" . $_REQUEST['broj'] . "' ORDER BY Terminus, Dan;";
 $polasci_rezultat = mysql_query($polasci_sql);
 
 while($ispis = mysql_fetch_assoc($polasci_rezultat)) {

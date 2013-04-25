@@ -14,16 +14,20 @@ konekcija();
 
 
 $sve_linije = array(
-	"tramvajske" => array(2, 3, 5, 6, 7),
-	"trolejbuske" => array(19, 21, 22, 28, 29),
-	"autobuske" => array(15, 16, 17, 18, 20),
+	"tramvajske",
+	"trolejbuske",
+	"autobuske",
 );
 
-foreach($sve_linije as $tip => $linije)
-	foreach($linije as $br_linije) {
-		$rezultat = mysql_query("SELECT Broj_linije, Trasa FROM " . $tip . "_linije WHERE Broj_linije=" . $br_linije . " AND Smer='А'");
-		$ispis[$tip][] = mysql_fetch_array($rezultat);
-	}	
+$ispis = array();
+foreach($sve_linije as $tip) {
+	$sql = "SELECT Broj_linije, Trasa FROM " . $tip . "_linije WHERE Smer='А' or Smer='A'";
+//	echo $sql . '<hr/>';
+	$rezultat = mysql_query($sql);
+	while ($r = mysql_fetch_array($rezultat)) {
+		$ispis[$tip][] = $r;
+	}
+}
 ?>
 
 <h2>Tramvajske linije</h2>

@@ -8,7 +8,7 @@ $sve_linije = array(
 
 foreach($sve_linije as $tip => $linije)
 	foreach($linije as $br_linije) {
-		$rezultat = mysql_query("SELECT Broj_linije, Trasa FROM " . $tip . "_linije WHERE Broj_linije=" . $br_linije . " AND Smer='А'");
+		$rezultat = mysql_query("SELECT Broj_linije, Trasa FROM " . $tip . "_linije WHERE Broj_linije='" . $br_linije . "' AND (Smer='А' OR Smer='A')");
 		$ispis[$tip][] = mysql_fetch_array($rezultat);
 	}
 

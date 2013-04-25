@@ -37,8 +37,10 @@ $isAdmin = true;
                                     <a href="?s=dodaj_stranicu">Dodaj stranicu</a><br/><hr/>
 				    <a href="?s=rezimi">Promena rezima</a><br/>
                                     <a href="?s=dodaj_rezim">Dodavanje novog rezima</a><br/><hr/>
+				    <a href="?s=cene">Cene</a><br/>
+                                    <a href="?s=dodaj_cenu">Dodavanje novih karata</a><br/><hr/>
 				    <a href="?s=linije">Linije</a><br/>
-                                    <a href="?s=dodaj_liniju&tip=tramvajske">+ Tamvajske linije</a><br/>
+                                    <a href="?s=dodaj_liniju&tip=tramvajske">+ Tramvajske linije</a><br/>
 				    <a href="?s=dodaj_liniju&tip=trolejbuske">+ Trojelbuske linije</a><br/>
                                     <a href="?s=dodaj_liniju&tip=autobuske">+ Autobuske linije</a><br/>
 				    <hr/>
@@ -50,12 +52,12 @@ $isAdmin = true;
                                 $_GET['s'] = "stranice";
                             }
 
-                            if (in_array($_GET['s'], array('stranice', 'dodaj_stranicu', 'logout', 'obrisi_stranicu', 'rezimi', 'dodaj_rezim', 'obrisi_rezim', 'linije', 'dodaj_liniju', 'obrisi_liniju'))) {
+                            if (in_array($_GET['s'], array('stranice', 'dodaj_stranicu', 'logout', 'obrisi_stranicu', 'rezimi', 'dodaj_rezim', 'obrisi_rezim', 'linije', 'dodaj_liniju', 'obrisi_liniju', 'cene', 'dodaj_cenu', 'obrisi_cenu'))) {
                                 $fp = is_file($_GET['s'] . ".php");
                                 $fp = preg_replace('|\W|', '', $fp);
 
                                 if ($fp) {
-                                    if (!$isAdmin && (!in_array($_GET['s'], array('stranice', 'dodaj_stranicu', 'logout', 'obrisi_stranicu', 'rezimi', 'dodaj_rezim', 'obrisi_rezim', 'linije', 'dodaj_liniju', 'obrisi_liniju'))))
+                                    if (!$isAdmin && (!in_array($_GET['s'], array('stranice', 'dodaj_stranicu', 'logout', 'obrisi_stranicu', 'rezimi', 'dodaj_rezim', 'obrisi_rezim', 'linije', 'dodaj_liniju', 'obrisi_liniju', 'cene', 'dodaj_cenu', 'obrisi_cenu'))))
                                         include("greska.php");
                                     else
                                         include($_GET['s'] . ".php");
