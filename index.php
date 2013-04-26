@@ -65,13 +65,13 @@
                     <ul class="dropdown dropdown-horizontal">
                         <li><a href="index.php">Почетна</a></li>
                         <li><a href="?strana=istorija_pocetak">О ГСП-у</a></li>
-                        <li class="dir">Линије
-                            <ul>
+                        <li><a href="?strana=dnevne_linije">Линије</a></li>
+<!--                            <ul>
                                 <li><a href="?strana=dnevne_linije">Дневне линије</a></li>
                                 <li><a href="?strana=nocne_linije">Ноћне линије</a></li>
-                                <!--<li><a href="skolske_linije.php">Школске линије</a></li>-->
-                            </ul>
-                        </li>
+                                <li><a href="skolske_linije.php">Школске линије</a></li>
+                            </ul>-->
+                        <!--</li>-->
                         <li><a href="?strana=galerija">Галерија</a></li>
                         <li class="dir">Карте
                             <ul>
@@ -113,8 +113,8 @@
             <!-- Begin Footer -->
             <div id="footer"> 
                 <ul class="footer_links">
-                    <li><a href="?strana=dnevne_linije">Дневне линије</a></li>
-                    <li><a href="?strana=nocne_linije">Ноћне линије</a></li>
+                    <li><a href="?strana=dnevne_linije">Линије</a></li>
+                    <!--<li><a href="?strana=nocne_linije">Ноћне линије</a></li>-->
                     <li><a href="?strana=karte_i_markice">Карте и маркице</a></li>
                     <li><a href="?strana=promena_rezima">Промене режима</a></li>
                     <li><a href="?strana=kontakt">Контакт</a></li>
