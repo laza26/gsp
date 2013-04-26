@@ -15,8 +15,8 @@
     
     if(!empty($_POST) && !empty($_POST['id'])) {
         //editovanje postojece stranice
-        $naslov = mysql_real_escape_string($_POST['naslov']);
-        $tekst = mysql_real_escape_string($_POST['tekst']);
+        $naslov = $_POST['naslov'];
+        $tekst = $_POST['tekst'];
         $id = $_POST['id'];
         
         $sql = 'UPDATE `stranice` SET `Naslov`="' . $naslov . '", `Tekst`="' . $tekst . '" WHERE ID=' . $id;
