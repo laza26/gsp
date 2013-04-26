@@ -15,8 +15,8 @@
     
     if(!empty($_POST) && !empty($_POST['id'])) {
         //editovanje postojece promena_rezima
-        $Naziv = mysql_real_escape_string($_POST['Naziv']);
-        $Sadrzaj = mysql_real_escape_string($_POST['Sadrzaj']);
+        $Naziv = $_POST['Naziv'];
+        $Sadrzaj = $_POST['Sadrzaj'];
         $id = $_POST['id'];
         
         $sql = 'UPDATE `promena_rezima` SET `Naziv`="' . $Naziv . '", `Sadrzaj`="' . $Sadrzaj . '" WHERE ID=' . $id;
